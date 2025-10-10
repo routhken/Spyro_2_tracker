@@ -1,0 +1,148 @@
+{
+    "items_layout": {
+        "type": "array",
+        "orientation": "vertical",
+        "margin": "0, 0",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "margin": "0, 0",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "item_size": "4, 4",
+                        "item_margin": "1, 0",
+                        "h_alignment": "left",
+                        "item_h_alignment": "center",
+                        "rows": [
+                            [
+                                "summer_talisman",
+                                "autumn_talisman",
+                                "orb",
+                                "progressive_sparx"
+                            ],
+                            [
+                                "infinite_fireball",
+                                "double_jump",
+                                "climb",
+                                "headbash",
+                                "swim"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "events_layout": {
+        "type": "array",
+        "orientation": "vertical",
+        "margin": "0, 0",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "margin": "0, 0",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "item_size": "6, 4",
+                        "item_margin": "1, 0",
+                        "h_alignment": "left",
+                        "item_h_alignment": "center",
+                        "rows": [
+                            [
+                                "crush_defeated",
+                                "gulp_defeated",
+                                "ripto_defeated"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "moneybags_layout": {
+        "type": "array",
+        "orientation": "vertical",
+        "margin": "0, 0",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "margin": "0, 0",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "item_size": "4, 4",
+                        "item_margin": "1, 0",
+                        "h_alignment": "left",
+                        "item_h_alignment": "center",
+                        "rows": [
+                            [
+                                "money_cg_bridge",
+                                "money_at_sub",
+                                "money_mc_elevator",
+                                "money_at_wall",
+                                "money_z_portal",
+                                "money_so_portal",
+                                "money_is_portal",
+                                "money_cs_portal"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "levels_layout": {
+        "type": "array",
+        "orientation": "vertical",
+        "margin": "0, 0",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "margin": "0, 0",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "item_size": "6, 3",
+                        "item_margin": "1, 1",
+                        "h_alignment": "left",
+                        "item_h_alignment": "center",
+                        "rows": [
+                            [
+                                "idol_springs_unlock",
+                                "colossus_unlock",
+                                "hurricos_unlock",
+                                "aquaria_towers_unlock",
+                                "sunny_beach_unlock",
+                                "ocean_speedway_unlock",
+                                "skelos_badlands_unlock",
+                                "crystal_glacier_unlock",
+                                "breeze_harbor_unlock",
+                                "zephyr_unlock",
+                                "metro_speedway_unlock"
+                            ],
+                            [
+                                "scorch_unlock",
+                                "shady_oasis_unlock",
+                                "magma_cone_unlock",
+                                "fracture_hills_unlock",
+                                "icy_speedway_unlock",
+                                "mystic_marsh_unlock",
+                                "cloud_temples_unlock",
+                                "canyon_speedway_unlock",
+                                "robotica_farms_unlock",
+                                "metropolis_unlock",
+                                "dragon_shores_unlock"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

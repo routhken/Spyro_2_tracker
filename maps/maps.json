@@ -1,0 +1,134 @@
+[
+    {
+        "name": "Full List",
+        "location_size": 30,
+        "location_border_thickness": 4,
+        "img": "images/maps/Full List.png"
+    },
+    {
+        "name": "Glimmer",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Glimmer.png"
+    },
+    {
+        "name": "Summer Forest",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Summer Forest.png"
+    },
+    {
+        "name": "Idol Springs",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Idol Springs.png"
+    },
+    {
+        "name": "Colossus",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Colossus.png"
+    },
+    {
+        "name": "Hurricos",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Hurricos.png"
+    },
+    {
+        "name": "Aquaria Towers",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Aquaria Towers.png"
+    },
+    {
+        "name": "Sunny Beach",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Sunny Beach.png"
+    },
+    {
+        "name": "Autumn Plains",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Autumn Plains.png"
+    },
+    {
+        "name": "Skelos Badlands",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Skelos Badlands.png"
+    },
+    {
+        "name": "Crystal Glacier",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Crystal Glacier.png"
+    },
+    {
+        "name": "Breeze Harbor",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Breeze Harbor.png"
+    },
+    {
+        "name": "Zephyr",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Zephyr.png"
+    },
+    {
+        "name": "Scorch",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Scorch.png"
+    },
+    {
+        "name": "Shady Oasis",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Shady Oasis.png"
+    },
+    {
+        "name": "Magma Cone",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Magma Cone.png"
+    },
+    {
+        "name": "Fracture Hills",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Fracture Hills.png"
+    },
+    {
+        "name": "Winter Tundra",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Winter Tundra.png"
+    },
+    {
+        "name": "Mystic Marsh",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Mystic Marsh.png"
+    },
+    {
+        "name": "Cloud Temples",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Cloud Temples.png"
+    },
+    {
+        "name": "Robotica Farms",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Robotica Farms.png"
+    },
+    {
+        "name": "Metropolis",
+        "location_size": 45,
+        "location_border_thickness": 4,
+        "img": "images/maps/Metropolis.png"
+    }
+]

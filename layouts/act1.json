@@ -1,0 +1,70 @@
+{
+    "act1": {
+        "type": "tabbed",
+        "tabs": [
+            {
+                "title": "Summer Forest",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Summer Forest"
+                    ]
+                }
+            },
+            {
+                "title": "Glimmer",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Glimmer"
+                    ]
+                }
+            },
+            {
+                "title": "Idol Springs",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Idol Springs"
+                    ]
+                }
+            },
+            {
+                "title": "Colossus",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Colossus"
+                    ]
+                }
+            },
+            {
+                "title": "Hurricos",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Hurricos"
+                    ]
+                }
+            },
+            {
+                "title": "Aquaria Towers",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Aquaria Towers"
+                    ]
+                }
+            },
+            {
+                "title": "Sunny Beach",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Sunny Beach"
+                    ]
+                }
+            }
+        ]
+    }
+}

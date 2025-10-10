@@ -1,0 +1,105 @@
+{
+    "logic_settings_layout": {
+        "type": "array",
+        "orientation": "vertical",
+        "margin": "0,0",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "margin": "0,0",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "item_size": "4, 4",
+                        "item_margin": "2, 2",
+                        "item_h_alignment": "center",
+                        "h_alignment": "left",
+                        "rows": [
+                            [
+                                "goal_option",
+                                "setting_enable_open_world",
+                                "setting_open_world_level_unlocks",
+                                "setting_open_world_ability_and_warp_unlocks",
+                                "setting_enable_25_pct_gem_checks",
+                                "setting_enable_50_pct_gem_checks"
+                            ],
+                            [
+                                "setting_enable_75_pct_gem_checks",
+                                "setting_enable_gem_checks",
+                                "setting_enable_total_gem_checks",
+                                "setting_max_total_gem_checks",
+                                "setting_enable_skillpoint_checks",
+                                "setting_enable_life_bottle_checks"
+                            ],
+                            [
+                                "setting_enable_spirit_particle_checks",
+                                "setting_enable_gemsanity",
+                                "setting_moneybags_settings",
+                                "setting_enable_progressive_sparx_health",
+                                "setting_enable_progressive_sparx_logic",
+                                "setting_double_jump_ability"
+                            ],
+                            [
+                                "setting_permanent_fireball_ability",
+                                "setting_logic_crush_early",
+                                "setting_logic_gulp_early",
+                                "setting_logic_ripto_early"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "gem_inventory_layout": {
+        "type": "array",
+        "orientation": "vertical",
+        "margin": "0,0",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "margin": "0,0",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "item_size": "5, 3",
+                        "item_margin": "2, 2",
+                        "item_h_alignment": "center",
+                        "h_alignment": "left",
+                        "rows": [
+                            [
+                                "inventory_gems_summ",
+                                "inventory_gems_glim",
+                                "inventory_gems_idol",
+                                "inventory_gems_colo",
+                                "inventory_gems_hurr",
+                                "inventory_gems_aqua",
+                                "inventory_gems_sunn"
+                            ],
+                            [
+                                "inventory_gems_autu",
+                                "inventory_gems_skel",
+                                "inventory_gems_crys",
+                                "inventory_gems_bree",
+                                "inventory_gems_zeph",
+                                "inventory_gems_scor",
+                                "inventory_gems_shad"
+                            ],
+                            [
+                                "inventory_gems_magm",
+                                "inventory_gems_frac",
+                                "inventory_gems_wint",
+                                "inventory_gems_myst",
+                                "inventory_gems_clou",
+                                "inventory_gems_robo",
+                                "inventory_gems_metr"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

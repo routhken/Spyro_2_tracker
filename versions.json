@@ -3,7 +3,7 @@
         {
             "package_version": "0.9.0",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v0.9.0/Spyro_2_aptracker.zip",
-            "sha256": "tba",
+            "sha256": "b6c63eb3c532d91dd428072fefc96b36cb4fb010d0675364e71eff544cb16315",
             "changelog": [
                 "Initial release",
                 " - Items: Tracking support for progression items",

@@ -1,0 +1,52 @@
+{
+    "act3": {
+        "type": "tabbed",
+        "tabs": [
+            {
+                "title": "Winter Tundra",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Winter Tundra"
+                    ]
+                }
+            },
+            {
+                "title": "Mystic Marsh",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Mystic Marsh"
+                    ]
+                }
+            },
+            {
+                "title": "Cloud Temples",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Cloud Temples"
+                    ]
+                }
+            },
+            {
+                "title": "Robotica Farms",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Robotica Farms"
+                    ]
+                }
+            },
+            {
+                "title": "Metropolis",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Metropolis"
+                    ]
+                }
+            }
+        ]
+    }
+}

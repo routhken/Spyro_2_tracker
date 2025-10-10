@@ -1,0 +1,393 @@
+[{
+    },{"name": "Summer Forest","map_locations": [{"map": "Summer Forest","x": 100,"y": 110}],"sections": [
+            {"name": "Summer Forest: Hunter's Challenge","ref": "Summer Forest/Summer Forest: Hunter's Challenge","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Summer Forest: On a secret ledge","ref": "Summer Forest/Summer Forest: On a secret ledge","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasSwim"]
+            },{"name": "Summer Forest: Atop a ladder","ref": "Summer Forest/Summer Forest: Atop a ladder","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$canReachSummerSecondHalf, $hasClimb"]
+            },{"name": "Summer Forest: Behind the door","ref": "Summer Forest/Summer Forest: Behind the door","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$canReachSummerSecondHalf"]
+            },{"name": "Summer Forest: Moneybags Unlock: Swim","ref": "Summer Forest/Summer Forest: Moneybags Unlock: Swim","chest_opened_img": "images/ui/Moneybags_Checked.png","chest_unopened_img": "images/ui/Moneybags.png","visibility_rules": ["$hasMoneybagsVanilla"]
+            },{"name": "Summer Forest: Moneybags Unlock: Door to Aquaria Towers","ref": "Summer Forest/Summer Forest: Moneybags Unlock: Door to Aquaria Towers","chest_opened_img": "images/ui/Moneybags_Checked.png","chest_unopened_img": "images/ui/Moneybags.png","access_rules": ["$canReachSummerSecondHalf"],"visibility_rules": ["$hasMoneybagsVanilla"]
+            },{"name": "Summer Forest: First Life Bottle Near Glimmer","ref": "Summer Forest/Summer Forest: First Life Bottle Near Glimmer","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Summer Forest: Second Life Bottle Near Glimmer","ref": "Summer Forest/Summer Forest: Second Life Bottle Near Glimmer","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Summer Forest: Life Bottle Near Sunny Beach","ref": "Summer Forest/Summer Forest: Life Bottle Near Sunny Beach","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","access_rules": ["$canReachSummerSecondHalf"],"visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Summer Forest: 25% Gems","ref": "Summer Forest/Summer Forest: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|summer_forest|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Summer Forest: 50% Gems","ref": "Summer Forest/Summer Forest: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|summer_forest|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Summer Forest: 75% Gems","ref": "Summer Forest/Summer Forest: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|summer_forest|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Summer Forest: All Gems","ref": "Summer Forest/Summer Forest: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|summer_forest|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Glimmer","map_locations": [{"map": "Glimmer","x": 310,"y": 110}],"sections": [
+            {"name": "Glimmer: Talisman","ref": "Glimmer/Glimmer: Talisman","chest_opened_img": "images/ui/Talisman_Glimmer_Checked.png","chest_unopened_img": "images/ui/Talisman_Glimmer.png"
+            },{"name": "Glimmer: Lizard hunt","ref": "Glimmer/Glimmer: Lizard hunt","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Glimmer: Gem Lamp Flight outdoors","ref": "Glimmer/Glimmer: Gem Lamp Flight outdoors","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Glimmer: Gem Lamp Flight in cave","ref": "Glimmer/Glimmer: Gem Lamp Flight in cave","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasClimb"]
+            },{"name": "Glimmer: All Spirit Particles","ref": "Glimmer/Glimmer: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Glimmer: 25% Gems","ref": "Glimmer/Glimmer: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|glimmer|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Glimmer: 50% Gems","ref": "Glimmer/Glimmer: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|glimmer|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Glimmer: 75% Gems","ref": "Glimmer/Glimmer: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|glimmer|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Glimmer: All Gems","ref": "Glimmer/Glimmer: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|glimmer|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Idol Springs","map_locations": [{"map": "Idol Springs","x": 520,"y": 110}],"access_rules": ["$hasIdolSpringsAccess"],"sections": [
+            {"name": "Idol Springs: Talisman","ref": "Idol Springs/Idol Springs: Talisman","chest_opened_img": "images/ui/Talisman_Idol_Springs_Checked.png","chest_unopened_img": "images/ui/Talisman_Idol_Springs.png"
+            },{"name": "Idol Springs: Foreman Bud's puzzles","ref": "Idol Springs/Idol Springs: Foreman Bud's puzzles","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasSwim"]
+            },{"name": "Idol Springs: Hula Girl rescue","ref": "Idol Springs/Idol Springs: Hula Girl rescue","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Idol Springs: Land on Idol (Skill Point)","ref": "Idol Springs/Idol Springs: Land on Idol (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Idol Springs: Land on Idol (Goal)","ref": "Idol Springs/Idol Springs: Land on Idol (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Idol Springs: Life Bottle","ref": "Idol Springs/Idol Springs: Life Bottle","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Idol Springs: All Spirit Particles","ref": "Idol Springs/Idol Springs: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Idol Springs: 25% Gems","ref": "Idol Springs/Idol Springs: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|idol_springs|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Idol Springs: 50% Gems","ref": "Idol Springs/Idol Springs: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|idol_springs|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Idol Springs: 75% Gems","ref": "Idol Springs/Idol Springs: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|idol_springs|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Idol Springs: All Gems","ref": "Idol Springs/Idol Springs: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|idol_springs|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Colossus","map_locations": [{"map": "Colossus","x": 730,"y": 110}],"access_rules": ["$hasColossusAccess"],"sections": [
+            {"name": "Colossus: Talisman","ref": "Colossus/Colossus: Talisman","chest_opened_img": "images/ui/Talisman_Colossus_Checked.png","chest_unopened_img": "images/ui/Talisman_Colossus.png"
+            },{"name": "Colossus: Hockey vs. Goalie","ref": "Colossus/Colossus: Hockey vs. Goalie","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Colossus: Hockey one on one","ref": "Colossus/Colossus: Hockey one on one","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Colossus: Evil spirit search","ref": "Colossus/Colossus: Evil spirit search","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Colossus: Perfect in Hockey (Skill Point)","ref": "Colossus/Colossus: Perfect in Hockey (Skill Point)","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Colossus: Perfect in Hockey (Goal)","ref": "Colossus/Colossus: Perfect in Hockey (Goal)","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Colossus: Life Bottle","ref": "Colossus/Colossus: Life Bottle","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Colossus: All Spirit Particles","ref": "Colossus/Colossus: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Colossus: 25% Gems","ref": "Colossus/Colossus: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|colossus|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Colossus: 50% Gems","ref": "Colossus/Colossus: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|colossus|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Colossus: 75% Gems","ref": "Colossus/Colossus: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|colossus|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Colossus: All Gems","ref": "Colossus/Colossus: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|colossus|400"],"visibility_rules": ["setting_enable_gem_checks"]
+            }]
+
+
+    },{"name": "Hurricos","map_locations": [{"map": "Hurricos","x": 945,"y": 110}],"access_rules": ["$hasHurricosAccess"],"sections": [
+            {"name": "Hurricos: Talisman","ref": "Hurricos/Hurricos: Talisman","chest_opened_img": "images/ui/Talisman_Hurricos_Checked.png","chest_unopened_img": "images/ui/Talisman_Hurricos.png"
+            },{"name": "Hurricos: Factory Glide 1","ref": "Hurricos/Hurricos: Factory Glide 1","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Hurricos: Factory Glide 2","ref": "Hurricos/Hurricos: Factory Glide 2","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Hurricos: Stone thief chase","ref": "Hurricos/Hurricos: Stone thief chase","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Hurricos: All Windmills (Skill Point)","ref": "Hurricos/Hurricos: All Windmills (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Hurricos: All Windmills (Goal)","ref": "Hurricos/Hurricos: All Windmills (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Hurricos: Life Bottle","ref": "Hurricos/Hurricos: Life Bottle","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Hurricos: All Spirit Particles","ref": "Hurricos/Hurricos: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Hurricos: 25% Gems","ref": "Hurricos/Hurricos: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|hurricos|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Hurricos: 50% Gems","ref": "Hurricos/Hurricos: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|hurricos|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Hurricos: 75% Gems","ref": "Hurricos/Hurricos: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|hurricos|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Hurricos: All Gems","ref": "Hurricos/Hurricos: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|hurricos|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+            
+
+
+    },{"name": "Aquaria Towers","map_locations": [{"map": "Aquaria Towers","x": 1155,"y": 110}],"access_rules": ["$hasAquariaTowersAccess"],"sections": [
+            {"name": "Aquaria Towers: Talisman","ref": "Aquaria Towers/Aquaria Towers: Talisman","chest_opened_img": "images/ui/Talisman_Aquaria_Towers_Checked.png","chest_unopened_img": "images/ui/Talisman_Aquaria_Towers.png","access_rules": ["$hasAquariaSub"]
+            },{"name": "Aquaria Towers: Seahorse Rescue","ref": "Aquaria Towers/Aquaria Towers: Seahorse Rescue","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasAquariaSub"]
+            },{"name": "Aquaria Towers: Manta ride I","ref": "Aquaria Towers/Aquaria Towers: Manta ride I","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasAquariaSub"]
+            },{"name": "Aquaria Towers: Manta ride II","ref": "Aquaria Towers/Aquaria Towers: Manta ride II","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasAquariaSub"]
+            },{"name": "Aquaria Towers: Moneybags Unlock: Aquaria Towers Submarine","ref": "Aquaria Towers/Aquaria Towers: Moneybags Unlock: Aquaria Towers Submarine","chest_opened_img": "images/ui/Moneybags_Checked.png","chest_unopened_img": "images/ui/Moneybags.png","visibility_rules": ["$hasMoneybagsVanilla"]
+            },{"name": "Aquaria Towers: All Seaweed (Skill Point)","ref": "Aquaria Towers/Aquaria Towers: All Seaweed (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","access_rules": ["$hasAquariaSub"],"visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Aquaria Towers: All Seaweed (Goal)","ref": "Aquaria Towers/Aquaria Towers: All Seaweed (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","access_rules": ["$hasAquariaSub"],"visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Aquaria Towers: Life Bottle","ref": "Aquaria Towers/Aquaria Towers: Life Bottle","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Aquaria Towers: All Spirit Particles","ref": "Aquaria Towers/Aquaria Towers: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","access_rules": ["$hasAquariaSub"],"visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Aquaria Towers: 25% Gems","ref": "Aquaria Towers/Aquaria Towers: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|aquaria_towers|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Aquaria Towers: 50% Gems","ref": "Aquaria Towers/Aquaria Towers: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|aquaria_towers|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Aquaria Towers: 75% Gems","ref": "Aquaria Towers/Aquaria Towers: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|aquaria_towers|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Aquaria Towers: All Gems","ref": "Aquaria Towers/Aquaria Towers: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|aquaria_towers|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Sunny Beach","map_locations": [{"map": "Sunny Beach","x": 1370,"y": 110}],"access_rules": ["$hasSunnyBeachAccess"],"sections": [
+            {"name": "Sunny Beach: Talisman","ref": "Sunny Beach/Sunny Beach: Talisman","chest_opened_img": "images/ui/Talisman_Sunny_Beach_Checked.png","chest_unopened_img": "images/ui/Talisman_Sunny_Beach.png"
+            },{"name": "Sunny Beach: Blasting boxes","ref": "Sunny Beach/Sunny Beach: Blasting boxes","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Sunny Beach: Turtle soup I","ref": "Sunny Beach/Sunny Beach: Turtle soup I","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasClimb"]
+            },{"name": "Sunny Beach: Turtle soup II","ref": "Sunny Beach/Sunny Beach: Turtle soup II","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasClimb"]
+            },{"name": "Sunny Beach: All Spirit Particles","ref": "Sunny Beach/Sunny Beach: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Sunny Beach: 25% Gems","ref": "Sunny Beach/Sunny Beach: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|sunny_beach|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Sunny Beach: 50% Gems","ref": "Sunny Beach/Sunny Beach: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|sunny_beach|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Sunny Beach: 75% Gems","ref": "Sunny Beach/Sunny Beach: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|sunny_beach|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Sunny Beach: All Gems","ref": "Sunny Beach/Sunny Beach: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|sunny_beach|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Ocean Speedway","map_locations": [{"map": "Ocean Speedway","x": 120,"y": 265}],"access_rules": ["$hasOceanSpeedwayAccess"],"sections": [
+            {"name": "Ocean Speedway: Follow Hunter","ref": "Ocean Speedway/Ocean Speedway: Follow Hunter","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Ocean Speedway: Under 1:10 (Skill Point)","ref": "Ocean Speedway/Ocean Speedway: Under 1:10 (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Ocean Speedway: Under 1:10 (Goal)","ref": "Ocean Speedway/Ocean Speedway: Under 1:10 (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Ocean Speedway: 25% Gems","ref": "Ocean Speedway/Ocean Speedway: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|ocean_speedway|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Ocean Speedway: 50% Gems","ref": "Ocean Speedway/Ocean Speedway: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|ocean_speedway|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Ocean Speedway: 75% Gems","ref": "Ocean Speedway/Ocean Speedway: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|ocean_speedway|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Ocean Speedway: All Gems","ref": "Ocean Speedway/Ocean Speedway: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|ocean_speedway|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Crush's Dungeon","map_locations": [{"map": "Crush's Dungeon","x": 330,"y": 265}],"access_rules": ["$hasCrushAccess"],"sections": [
+            {"name": "Crush's Dungeon: Crush Defeated","ref": "Crush's Dungeon/Crush's Dungeon: Crush Defeated","chest_opened_img": "images/ui/Boss_Crush_Checked.png","chest_unopened_img": "images/ui/Boss_Crush.png"
+            },{"name": "Crush's Dungeon: Perfect (Skill Point)","ref": "Crush's Dungeon/Crush's Dungeon: Perfect (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Crush's Dungeon: Perfect (Goal)","ref": "Crush's Dungeon/Crush's Dungeon: Perfect (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+        }]
+
+
+    },{"name": "Autumn Plains","map_locations": [{"map": "Autumn Plains","x": 520,"y": 265}],"access_rules": ["$hasAutumnPlainsAccess"],"sections": [
+            {"name": "Autumn Plains: The end of the wall","ref": "Autumn Plains/Autumn Plains: The end of the wall","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$canReachMetro, $canPassAutumnDoor"]
+            },{"name": "Autumn Plains: Long glide!","ref": "Autumn Plains/Autumn Plains: Long glide!","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$canPassAutumnDoor"]
+            },{"name": "Autumn Plains: Moneybags Unlock: Zephyr Portal","ref": "Autumn Plains/Autumn Plains: Moneybags Unlock: Zephyr Portal","chest_opened_img": "images/ui/Moneybags_Checked.png","chest_unopened_img": "images/ui/Moneybags.png","visibility_rules": ["$hasMoneybagsVanilla"]
+            },{"name": "Autumn Plains: Moneybags Unlock: Climb","ref": "Autumn Plains/Autumn Plains: Moneybags Unlock: Climb","chest_opened_img": "images/ui/Moneybags_Checked.png","chest_unopened_img": "images/ui/Moneybags.png","visibility_rules": ["$hasMoneybagsVanilla"]
+            },{"name": "Autumn Plains: Moneybags Unlock: Shady Oasis Portal","ref": "Autumn Plains/Autumn Plains: Moneybags Unlock: Shady Oasis Portal","chest_opened_img": "images/ui/Moneybags_Checked.png","chest_unopened_img": "images/ui/Moneybags.png","access_rules": ["$canPassAutumnDoor"],"visibility_rules": ["$hasMoneybagsVanilla"]
+            },{"name": "Autumn Plains: Moneybags Unlock: Icy Speedway Portal","ref": "Autumn Plains/Autumn Plains: Moneybags Unlock: Icy Speedway Portal","chest_opened_img": "images/ui/Moneybags_Checked.png","chest_unopened_img": "images/ui/Moneybags.png","access_rules": ["$canPassAutumnDoor"],"visibility_rules": ["$hasMoneybagsVanilla"]
+            },{"name": "Autumn Plains: Life Bottle","ref": "Autumn Plains/Autumn Plains: Life Bottle","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","access_rules": ["$canReachAutumnSecondHalf"],"visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Autumn Plains: 25% Gems","ref": "Autumn Plains/Autumn Plains: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|autumn_plains|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Autumn Plains: 50% Gems","ref": "Autumn Plains/Autumn Plains: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|autumn_plains|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Autumn Plains: 75% Gems","ref": "Autumn Plains/Autumn Plains: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|autumn_plains|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Autumn Plains: All Gems","ref": "Autumn Plains/Autumn Plains: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|autumn_plains|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Skelos Badlands","map_locations": [{"map": "Skelos Badlands","x": 730,"y": 265}],"access_rules": ["$hasSkelosBadlandsAccess"],"sections": [
+            {"name": "Skelos Badlands: Talisman","ref": "Skelos Badlands/Skelos Badlands: Talisman","chest_opened_img": "images/ui/Talisman_Skelos_Badlands_Checked.png","chest_unopened_img": "images/ui/Talisman_Skelos_Badlands.png"
+            },{"name": "Skelos Badlands: Lava lizards I","ref": "Skelos Badlands/Skelos Badlands: Lava lizards I","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Skelos Badlands: Lava lizards II","ref": "Skelos Badlands/Skelos Badlands: Lava lizards II","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Skelos Badlands: Dem bones","ref": "Skelos Badlands/Skelos Badlands: Dem bones","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Skelos Badlands: All Cacti (Skill Point)","ref": "Skelos Badlands/Skelos Badlands: All Cacti (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Skelos Badlands: All Cacti (Goal)","ref": "Skelos Badlands/Skelos Badlands: All Cacti (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Skelos Badlands: Catbat Quartet (Skill Point)","ref": "Skelos Badlands/Skelos Badlands: Catbat Quartet (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Skelos Badlands: Catbat Quartet (Goal)","ref": "Skelos Badlands/Skelos Badlands: Catbat Quartet (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Skelos Badlands: Life Bottle","ref": "Skelos Badlands/Skelos Badlands: Life Bottle","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Skelos Badlands: All Spirit Particles","ref": "Skelos Badlands/Skelos Badlands: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Skelos Badlands: 25% Gems","ref": "Skelos Badlands/Skelos Badlands: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|skelos_badlands|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Skelos Badlands: 50% Gems","ref": "Skelos Badlands/Skelos Badlands: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|skelos_badlands|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Skelos Badlands: 75% Gems","ref": "Skelos Badlands/Skelos Badlands: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|skelos_badlands|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Skelos Badlands: All Gems","ref": "Skelos Badlands/Skelos Badlands: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|skelos_badlands|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Crystal Glacier","map_locations": [{"map": "Crystal Glacier","x": 945,"y": 265}],"access_rules": ["$hasCrystalGlacierAccess"],"sections": [
+            {"name": "Crystal Glacier: Talisman","ref": "Crystal Glacier/Crystal Glacier: Talisman","chest_opened_img": "images/ui/Talisman_Crystal_Glacier_Checked.png","chest_unopened_img": "images/ui/Talisman_Crystal_Glacier.png","access_rules": ["$hasCGBridge"]
+            },{"name": "Crystal Glacier: Draclet cave","ref": "Crystal Glacier/Crystal Glacier: Draclet cave","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasCGBridge"]
+            },{"name": "Crystal Glacier: George the snow leopard","ref": "Crystal Glacier/Crystal Glacier: George the snow leopard","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasCGBridge"]
+            },{"name": "Crystal Glacier: Moneybags Unlock: Crystal Glacier Bridge","ref": "Crystal Glacier/Crystal Glacier: Moneybags Unlock: Crystal Glacier Bridge","chest_opened_img": "images/ui/Moneybags_Checked.png","chest_unopened_img": "images/ui/Moneybags.png","visibility_rules": ["$hasMoneybagsVanilla"]
+            },{"name": "Crystal Glacier: Life Bottle","ref": "Crystal Glacier/Crystal Glacier: Life Bottle","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","access_rules": ["$hasCGBridge"],"visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Crystal Glacier: All Spirit Particles","ref": "Crystal Glacier/Crystal Glacier: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","access_rules": ["$hasCGBridge"],"visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Crystal Glacier: 25% Gems","ref": "Crystal Glacier/Crystal Glacier: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|crystal_glacier|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Crystal Glacier: 50% Gems","ref": "Crystal Glacier/Crystal Glacier: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|crystal_glacier|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Crystal Glacier: 75% Gems","ref": "Crystal Glacier/Crystal Glacier: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|crystal_glacier|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Crystal Glacier: All Gems","ref": "Crystal Glacier/Crystal Glacier: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|crystal_glacier|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Breeze Harbor","map_locations": [{"map": "Breeze Harbor","x": 1155,"y": 265}],"access_rules": ["$hasBreezeHarborAccess"],"sections": [
+            {"name": "Breeze Harbor: Talisman","ref": "Breeze Harbor/Breeze Harbor: Talisman","chest_opened_img": "images/ui/Talisman_Breeze_Harbor_Checked.png","chest_unopened_img": "images/ui/Talisman_Breeze_Harbor.png"
+            },{"name": "Breeze Harbor: Gear grab","ref": "Breeze Harbor/Breeze Harbor: Gear grab","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Breeze Harbor: Mine blast","ref": "Breeze Harbor/Breeze Harbor: Mine blast","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Breeze Harbor: Life Bottle by Final Bonfire","ref": "Breeze Harbor/Breeze Harbor: Life Bottle by Final Bonfire","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Breeze Harbor: Life Bottle by Final Cannon","ref": "Breeze Harbor/Breeze Harbor: Life Bottle by Final Cannon","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Breeze Harbor: All Spirit Particles","ref": "Breeze Harbor/Breeze Harbor: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Breeze Harbor: 25% Gems","ref": "Breeze Harbor/Breeze Harbor: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|breeze_harbor|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Breeze Harbor: 50% Gems","ref": "Breeze Harbor/Breeze Harbor: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|breeze_harbor|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Breeze Harbor: 75% Gems","ref": "Breeze Harbor/Breeze Harbor: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|breeze_harbor|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Breeze Harbor: All Gems","ref": "Breeze Harbor/Breeze Harbor: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|breeze_harbor|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Zephyr","map_locations": [{"map": "Zephyr","x": 1370,"y": 265}],"access_rules": ["$hasZephyrAccess"],"sections": [
+            {"name": "Zephyr: Talisman","ref": "Zephyr/Zephyr: Talisman","chest_opened_img": "images/ui/Talisman_Zephyr_Checked.png","chest_unopened_img": "images/ui/Talisman_Zephyr.png"
+            },{"name": "Zephyr: Cowlek corral I","ref": "Zephyr/Zephyr: Cowlek corral I","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Zephyr: Cowlek corral II","ref": "Zephyr/Zephyr: Cowlek corral II","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasClimb"]
+            },{"name": "Zephyr: Sowing seeds I","ref": "Zephyr/Zephyr: Sowing seeds I","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Zephyr: Sowing seeds II","ref": "Zephyr/Zephyr: Sowing seeds II","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Zephyr: Life Bottle","ref": "Zephyr/Zephyr: Life Bottle","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Zephyr: All Spirit Particles","ref": "Zephyr/Zephyr: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","access_rules": ["$hasClimb"],"visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Zephyr: 25% Gems","ref": "Zephyr/Zephyr: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|zephyr|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Zephyr: 50% Gems","ref": "Zephyr/Zephyr: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|zephyr|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Zephyr: 75% Gems","ref": "Zephyr/Zephyr: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|zephyr|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Zephyr: All Gems","ref": "Zephyr/Zephyr: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|zephyr|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Metro Speedway","map_locations": [{"map": "Metro Speedway","x": 120,"y": 422}],"access_rules": ["$hasMetroSpeedwayAccess"],"sections": [
+            {"name": "Metro Speedway: Grab the Loot","ref": "Metro Speedway/Metro Speedway: Grab the Loot","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Metro Speedway: Under 1:15 (Skill Point)","ref": "Metro Speedway/Metro Speedway: Under 1:15 (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Metro Speedway: Under 1:15 (Goal)","ref": "Metro Speedway/Metro Speedway: Under 1:15 (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Metro Speedway: 25% Gems","ref": "Metro Speedway/Metro Speedway: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|metro_speedway|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Metro Speedway: 50% Gems","ref": "Metro Speedway/Metro Speedway: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|metro_speedway|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Metro Speedway: 75% Gems","ref": "Metro Speedway/Metro Speedway: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|metro_speedway|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Metro Speedway: All Gems","ref": "Metro Speedway/Metro Speedway: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|metro_speedway|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Scorch","map_locations": [{"map": "Scorch","x": 310,"y": 422}],"access_rules": ["$hasScorchAccess"],"sections": [
+            {"name": "Scorch: Talisman","ref": "Scorch/Scorch: Talisman","chest_opened_img": "images/ui/Talisman_Scorch_Checked.png","chest_unopened_img": "images/ui/Talisman_Scorch.png"
+            },{"name": "Scorch: Barrel of Monkeys","ref": "Scorch/Scorch: Barrel of Monkeys","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Scorch: Capture the flags","ref": "Scorch/Scorch: Capture the flags","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Scorch: All Trees (Skill Point)","ref": "Scorch/Scorch: All Trees (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Scorch: All Trees (Goal)","ref": "Scorch/Scorch: All Trees (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Scorch: Life Bottle","ref": "Scorch/Scorch: Life Bottle","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Scorch: All Spirit Particles","ref": "Scorch/Scorch: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Scorch: 25% Gems","ref": "Scorch/Scorch: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|scorch|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Scorch: 50% Gems","ref": "Scorch/Scorch: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|scorch|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Scorch: 75% Gems","ref": "Scorch/Scorch: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|scorch|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Scorch: All Gems","ref": "Scorch/Scorch: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|scorch|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Shady Oasis","map_locations": [{"map": "Shady Oasis","x": 520,"y": 422}],"access_rules": ["$hasShadyOasisAccess"],"sections": [
+            {"name": "Shady Oasis: Talisman","ref": "Shady Oasis/Shady Oasis: Talisman","chest_opened_img": "images/ui/Talisman_Glimmer_Checked.png","chest_unopened_img": "images/ui/Talisman_Glimmer.png"
+            },{"name": "Shady Oasis: Catch 3 thieves","ref": "Shady Oasis/Shady Oasis: Catch 3 thieves","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Shady Oasis: Free Hippos","ref": "Shady Oasis/Shady Oasis: Free Hippos","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasHeadbash"]
+            },{"name": "Shady Oasis: Life Bottle","ref": "Shady Oasis/Shady Oasis: Life Bottle","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Shady Oasis: All Spirit Particles","ref": "Shady Oasis/Shady Oasis: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Shady Oasis: 25% Gems","ref": "Shady Oasis/Shady Oasis: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|shady_oasis|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Shady Oasis: 50% Gems","ref": "Shady Oasis/Shady Oasis: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|shady_oasis|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Shady Oasis: 75% Gems","ref": "Shady Oasis/Shady Oasis: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|shady_oasis|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Shady Oasis: All Gems","ref": "Shady Oasis/Shady Oasis: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|shady_oasis|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Magma Cone","map_locations": [{"map": "Magma Cone","x": 730,"y": 422}],"access_rules": ["$hasMagmaConeAccess"],"sections": [
+            {"name": "Magma Cone: Talisman","ref": "Magma Cone/Magma Cone: Talisman","chest_opened_img": "images/ui/Talisman_Magma_Cone_Checked.png","chest_unopened_img": "images/ui/Talisman_Magma_Cone.png","access_rules": ["$hasMCElevator"]
+            },{"name": "Magma Cone: Crystal geysers I","ref": "Magma Cone/Magma Cone: Crystal geysers I","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Magma Cone: Crystal geysers II","ref": "Magma Cone/Magma Cone: Crystal geysers II","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Magma Cone: Party crashers","ref": "Magma Cone/Magma Cone: Party crashers","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasMCElevator"]
+            },{"name": "Magma Cone: Moneybags Unlock: Magma Cone Elevator","ref": "Magma Cone/Magma Cone: Moneybags Unlock: Magma Cone Elevator","chest_opened_img": "images/ui/Moneybags_Checked.png","chest_unopened_img": "images/ui/Moneybags.png","visibility_rules": ["$hasMoneybagsVanilla"]
+            },{"name": "Magma Cone: Life Bottle by Moneybags","ref": "Magma Cone/Magma Cone: Life Bottle by Moneybags","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Magma Cone: Life Bottle on Ledge 1","ref": "Magma Cone/Magma Cone: Life Bottle on Ledge 1","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Magma Cone: Life Bottle on Ledge 2","ref": "Magma Cone/Magma Cone: Life Bottle on Ledge 2","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Magma Cone: Life Bottle on Ledge 3","ref": "Magma Cone/Magma Cone: Life Bottle on Ledge 3","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Magma Cone: All Spirit Particles","ref": "Magma Cone/Magma Cone: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","access_rules": ["$hasMCElevator"],"visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Magma Cone: 25% Gems","ref": "Magma Cone/Magma Cone: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|magma_cone|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Magma Cone: 50% Gems","ref": "Magma Cone/Magma Cone: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|magma_cone|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Magma Cone: 75% Gems","ref": "Magma Cone/Magma Cone: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|magma_cone|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Magma Cone: All Gems","ref": "Magma Cone/Magma Cone: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|magma_cone|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Fracture Hills","map_locations": [{"map": "Fracture Hills","x": 945,"y": 422}],"access_rules": ["$hasFractureHillsAccess"],"sections": [
+            {"name": "Fracture Hills: Talisman","ref": "Fracture Hills/Fracture Hills: Talisman","chest_opened_img": "images/ui/Talisman_Fracture_Hills_Checked.png","chest_unopened_img": "images/ui/Talisman_Fracture_Hills.png"
+            },{"name": "Fracture Hills: Earthshaper bash","ref": "Fracture Hills/Fracture Hills: Earthshaper bash","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasHeadbash"]
+            },{"name": "Fracture Hills: Free the faun","ref": "Fracture Hills/Fracture Hills: Free the faun","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Fracture Hills: Alchemist escort","ref": "Fracture Hills/Fracture Hills: Alchemist escort","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Fracture Hills: 3 Laps of Supercharge (Skill Point)","ref": "Fracture Hills/Fracture Hills: 3 Laps of Supercharge (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Fracture Hills: 3 Laps of Supercharge (Goal)","ref": "Fracture Hills/Fracture Hills: 3 Laps of Supercharge (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Fracture Hills: Life Bottle","ref": "Fracture Hills/Fracture Hills: Life Bottle","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Fracture Hills: All Spirit Particles","ref": "Fracture Hills/Fracture Hills: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","access_rules": ["$hasHeadbash"],"visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Fracture Hills: 25% Gems","ref": "Fracture Hills/Fracture Hills: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|fracture_hills|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Fracture Hills: 50% Gems","ref": "Fracture Hills/Fracture Hills: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|fracture_hills|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Fracture Hills: 75% Gems","ref": "Fracture Hills/Fracture Hills: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|fracture_hills|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Fracture Hills: All Gems","ref": "Fracture Hills/Fracture Hills: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|fracture_hills|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Icy Speedway","map_locations": [{"map": "Icy Speedway","x": 1175,"y": 422}],"access_rules": ["$hasIcySpeedwayAccess"],"sections": [
+            {"name": "Icy Speedway: Parasail through Rings","ref": "Icy Speedway/Icy Speedway: Parasail through Rings","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Icy Speedway: Under 1:15 (Skill Point)","ref": "Icy Speedway/Icy Speedway: Under 1:15 (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Icy Speedway: Under 1:15 (Goal)","ref": "Icy Speedway/Icy Speedway: Under 1:15 (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Icy Speedway: 25% Gems","ref": "Icy Speedway/Icy Speedway: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|icy_speedway|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Icy Speedway: 50% Gems","ref": "Icy Speedway/Icy Speedway: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|icy_speedway|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Icy Speedway: 75% Gems","ref": "Icy Speedway/Icy Speedway: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|icy_speedway|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Icy Speedway: All Gems","ref": "Icy Speedway/Icy Speedway: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|icy_speedway|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Gulp's Overlook","map_locations": [{"map": "Gulp's Overlook","x": 1390,"y": 422}],"access_rules": ["$hasGulpAccess"],"sections": [
+            {"name": "Gulp's Overlook: Gulp Defeated","ref": "Gulp's Overlook/Gulp's Overlook: Gulp Defeated","chest_opened_img": "images/ui/Boss_Gulp_Checked.png","chest_unopened_img": "images/ui/Boss_Gulp.png"
+            },{"name": "Gulp's Overlook: Perfect (Skill Point)","ref": "Gulp's Overlook/Gulp's Overlook: Perfect (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Gulp's Overlook: Perfect (Goal)","ref": "Gulp's Overlook/Gulp's Overlook: Perfect (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Gulp's Overlook: Hit Ripto (Skill Point)","ref": "Gulp's Overlook/Gulp's Overlook: Hit Ripto (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Gulp's Overlook: Hit Ripto (Goal)","ref": "Gulp's Overlook/Gulp's Overlook: Hit Ripto (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+        }]
+
+
+    },{"name": "Winter Tundra","map_locations": [{"map": "Winter Tundra","x": 100,"y": 580}],"access_rules": ["$hasWinterTundraAccess"],"sections": [
+            {"name": "Winter Tundra: On the tall wall","ref": "Winter Tundra/Winter Tundra: On the tall wall","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$canReachWinterSecondHalf"]
+            },{"name": "Winter Tundra: Top of the waterfall","ref": "Winter Tundra/Winter Tundra: Top of the waterfall","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$canReachWinterSecondHalf"]
+            },{"name": "Winter Tundra: Smash the rock","ref": "Winter Tundra/Winter Tundra: Smash the rock","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$hasHeadbash"]
+            },{"name": "Winter Tundra: Moneybags Unlock: Canyon Speedway Portal","ref": "Winter Tundra/Winter Tundra: Moneybags Unlock: Canyon Speedway Portal","chest_opened_img": "images/ui/Moneybags_Checked.png","chest_unopened_img": "images/ui/Moneybags.png","visibility_rules": ["$hasMoneybagsVanilla"]
+            },{"name": "Winter Tundra: Moneybags Unlock: Headbash","ref": "Winter Tundra/Winter Tundra: Moneybags Unlock: Headbash","chest_opened_img": "images/ui/Moneybags_Checked.png","chest_unopened_img": "images/ui/Moneybags.png","visibility_rules": ["$hasMoneybagsVanilla"]
+            },{"name": "Winter Tundra: 25% Gems","ref": "Winter Tundra/Winter Tundra: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|winter_tundra|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Winter Tundra: 50% Gems","ref": "Winter Tundra/Winter Tundra: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|winter_tundra|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Winter Tundra: 75% Gems","ref": "Winter Tundra/Winter Tundra: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|winter_tundra|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Winter Tundra: All Gems","ref": "Winter Tundra/Winter Tundra: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|winter_tundra|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Mystic Marsh","map_locations": [{"map": "Mystic Marsh","x": 310,"y": 580}],"access_rules": ["$hasMysticMarshAccess"],"sections": [
+            {"name": "Mystic Marsh: Fix the fountain","ref": "Mystic Marsh/Mystic Marsh: Fix the fountain","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Mystic Marsh: Very versatile thieves!","ref": "Mystic Marsh/Mystic Marsh: Very versatile thieves!","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Mystic Marsh: Retrieve professor's pencil","ref": "Mystic Marsh/Mystic Marsh: Retrieve professor's pencil","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Mystic Marsh: Life Bottle by Basil","ref": "Mystic Marsh/Mystic Marsh: Life Bottle by Basil","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Mystic Marsh: Life Bottle by Cooking Pot","ref": "Mystic Marsh/Mystic Marsh: Life Bottle by Cooking Pot","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Mystic Marsh: All Spirit Particles","ref": "Mystic Marsh/Mystic Marsh: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Mystic Marsh: 25% Gems","ref": "Mystic Marsh/Mystic Marsh: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|mystic_marsh|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Mystic Marsh: 50% Gems","ref": "Mystic Marsh/Mystic Marsh: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|mystic_marsh|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Mystic Marsh: 75% Gems","ref": "Mystic Marsh/Mystic Marsh: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|mystic_marsh|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Mystic Marsh: All Gems","ref": "Mystic Marsh/Mystic Marsh: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|mystic_marsh|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Cloud Temples","map_locations": [{"map": "Cloud Temples","x": 520,"y": 580}],"access_rules": ["$hasCloudTemplesAccess"],"sections": [
+            {"name": "Cloud Temples: Agent Zero's secret hideout","ref": "Cloud Temples/Cloud Temples: Agent Zero's secret hideout","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Cloud Temples: Ring tower bells","ref": "Cloud Temples/Cloud Temples: Ring tower bells","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Cloud Temples: Break down doors","ref": "Cloud Temples/Cloud Temples: Break down doors","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Cloud Temples: Life Bottle","ref": "Cloud Temples/Cloud Temples: Life Bottle","chest_opened_img": "images/ui/Butterfly Jar_Checked.png","chest_unopened_img": "images/ui/Butterfly_Jar.png","visibility_rules": ["$hasLifeBottles"]
+            },{"name": "Cloud Temples: All Spirit Particles","ref": "Cloud Temples/Cloud Temples: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Cloud Temples: 25% Gems","ref": "Cloud Temples/Cloud Temples: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|cloud_temples|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Cloud Temples: 50% Gems","ref": "Cloud Temples/Cloud Temples: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|cloud_temples|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Cloud Temples: 75% Gems","ref": "Cloud Temples/Cloud Temples: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|cloud_temples|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Cloud Temples: All Gems","ref": "Cloud Temples/Cloud Temples: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|cloud_temples|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Canyon Speedway","map_locations": [{"map": "Canyon Speedway","x": 750,"y": 580}],"access_rules": ["$hasCanyonSpeedwayAccess"],"sections": [
+            {"name": "Canyon Speedway: Shoot down balloons","ref": "Canyon Speedway/Canyon Speedway: Shoot down balloons","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Canyon Speedway: Under 1:10 (Skill Point)","ref": "Canyon Speedway/Canyon Speedway: Under 1:10 (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Canyon Speedway: Under 1:10 (Goal)","ref": "Canyon Speedway/Canyon Speedway: Under 1:10 (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+            },{"name": "Canyon Speedway: 25% Gems","ref": "Canyon Speedway/Canyon Speedway: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|canyon_speedway|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Canyon Speedway: 50% Gems","ref": "Canyon Speedway/Canyon Speedway: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|canyon_speedway|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Canyon Speedway: 75% Gems","ref": "Canyon Speedway/Canyon Speedway: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|canyon_speedway|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Canyon Speedway: All Gems","ref": "Canyon Speedway/Canyon Speedway: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|canyon_speedway|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Robotica Farms","map_locations": [{"map": "Robotica Farms","x": 945,"y": 580}],"access_rules": ["$hasRoboticaFarmsAccess"],"sections": [
+            {"name": "Robotica Farms: Switch on bug light","ref": "Robotica Farms/Robotica Farms: Switch on bug light","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Robotica Farms: Clear tractor path","ref": "Robotica Farms/Robotica Farms: Clear tractor path","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Robotica Farms: Exterminate crow bugs","ref": "Robotica Farms/Robotica Farms: Exterminate crow bugs","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Robotica Farms: All Spirit Particles","ref": "Robotica Farms/Robotica Farms: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Robotica Farms: 25% Gems","ref": "Robotica Farms/Robotica Farms: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|robotica_farms|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Robotica Farms: 50% Gems","ref": "Robotica Farms/Robotica Farms: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|robotica_farms|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Robotica Farms: 75% Gems","ref": "Robotica Farms/Robotica Farms: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|robotica_farms|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Robotica Farms: All Gems","ref": "Robotica Farms/Robotica Farms: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|robotica_farms|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Metropolis","map_locations": [{"map": "Metropolis","x": 1155,"y": 580}],"access_rules": ["$hasMetropolisAccess"],"sections": [
+            {"name": "Metropolis: Conquer invading cows","ref": "Metropolis/Metropolis: Conquer invading cows","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Metropolis: Shoot down sheep saucers I","ref": "Metropolis/Metropolis: Shoot down sheep saucers I","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Metropolis: Shoot down sheep saucers II","ref": "Metropolis/Metropolis: Shoot down sheep saucers II","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Metropolis: Ox bombing","ref": "Metropolis/Metropolis: Ox bombing","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png"
+            },{"name": "Metropolis: All Spirit Particles","ref": "Metropolis/Metropolis: All Spirit Particles","chest_opened_img": "images/ui/Spirit_Particle_Checked.png","chest_unopened_img": "images/ui/Spirit_Particle.png","visibility_rules": ["$hasSpiritParticles"]
+            },{"name": "Metropolis: 25% Gems","ref": "Metropolis/Metropolis: 25% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|metropolis|100"],"visibility_rules": ["setting_enable_25_pct_gem_checks"]
+            },{"name": "Metropolis: 50% Gems","ref": "Metropolis/Metropolis: 50% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|metropolis|200"],"visibility_rules": ["setting_enable_50_pct_gem_checks"]
+            },{"name": "Metropolis: 75% Gems","ref": "Metropolis/Metropolis: 75% Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|metropolis|300"],"visibility_rules": ["setting_enable_75_pct_gem_checks"]
+            },{"name": "Metropolis: All Gems","ref": "Metropolis/Metropolis: All Gems","chest_opened_img": "images/ui/Gem_Red_Checked.png","chest_unopened_img": "images/ui/Gem_Red.png","access_rules": ["$canReachGemCount|metropolis|400"],"visibility_rules": ["setting_enable_gem_checks"]
+        }]
+
+
+    },{"name": "Ripto's Arena","map_locations": [{"map": "Ripto's Arena","x": 1390,"y": 580}],"access_rules": ["$hasRiptoAccess"],"sections": [
+            {"name": "Ripto's Arena: Ripto Defeated","ref": "Ripto's Arena/Ripto's Arena: Ripto Defeated","chest_opened_img": "images/ui/Boss_Ripto_Checked.png","chest_unopened_img": "images/ui/Boss_Ripto.png"
+            },{"name": "Ripto's Arena: Perfect (Skill Point)","ref": "Ripto's Arena/Ripto's Arena: Perfect (Skill Point)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPoints"]
+            },{"name": "Ripto's Arena: Perfect (Goal)","ref": "Ripto's Arena/Ripto's Arena: Perfect (Goal)","chest_opened_img": "images/ui/Skillpoint_Checked.png","chest_unopened_img": "images/ui/Skillpoint.png","visibility_rules": ["$hasSkillPointsGoal"]
+        }]
+
+
+    },{"name": "Dragon Shores","map_locations": [{"map": "Dragon Shores","x": 750,"y": 730}],"access_rules": ["$hasDragonShoresAccess"],"visibility_rules": ["$hasGoal10Token"],"sections": [
+            {"name": "Dragon Shores: Tunnel o' Love","ref": "Dragon Shores/Dragon Shores: Tunnel o' Love","chest_opened_img": "images/ui/Token_Checked.png","chest_unopened_img": "images/ui/Token.png"
+            },{"name": "Dragon Shores: Shooting Gallery I","ref": "Dragon Shores/Dragon Shores: Shooting Gallery I","chest_opened_img": "images/ui/Token_Checked.png","chest_unopened_img": "images/ui/Token.png"
+            },{"name": "Dragon Shores: Shooting Gallery II","ref": "Dragon Shores/Dragon Shores: Shooting Gallery II","chest_opened_img": "images/ui/Token_Checked.png","chest_unopened_img": "images/ui/Token.png"
+            },{"name": "Dragon Shores: Shooting Gallery III","ref": "Dragon Shores/Dragon Shores: Shooting Gallery III","chest_opened_img": "images/ui/Token_Checked.png","chest_unopened_img": "images/ui/Token.png"
+            },{"name": "Dragon Shores: Rollercoaster I","ref": "Dragon Shores/Dragon Shores: Rollercoaster I","chest_opened_img": "images/ui/Token_Checked.png","chest_unopened_img": "images/ui/Token.png"
+            },{"name": "Dragon Shores: Rollercoaster II","ref": "Dragon Shores/Dragon Shores: Rollercoaster II","chest_opened_img": "images/ui/Token_Checked.png","chest_unopened_img": "images/ui/Token.png"
+            },{"name": "Dragon Shores: Rollercoaster III","ref": "Dragon Shores/Dragon Shores: Rollercoaster III","chest_opened_img": "images/ui/Token_Checked.png","chest_unopened_img": "images/ui/Token.png"
+            },{"name": "Dragon Shores: Dunk Tank I","ref": "Dragon Shores/Dragon Shores: Dunk Tank I","chest_opened_img": "images/ui/Token_Checked.png","chest_unopened_img": "images/ui/Token.png"
+            },{"name": "Dragon Shores: Dunk Tank II","ref": "Dragon Shores/Dragon Shores: Dunk Tank II","chest_opened_img": "images/ui/Token_Checked.png","chest_unopened_img": "images/ui/Token.png"
+            },{"name": "Dragon Shores: Dunk Tank III","ref": "Dragon Shores/Dragon Shores: Dunk Tank III","chest_opened_img": "images/ui/Token_Checked.png","chest_unopened_img": "images/ui/Token.png"
+        }]
+    }
+]

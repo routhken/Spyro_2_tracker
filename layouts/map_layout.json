@@ -1,0 +1,47 @@
+{
+  "map_layout": {
+    "type": "tabbed",
+    "dock": "top",
+    "tabs": [
+      {
+        "title": "Full List",
+        "content": {
+          "type": "map",
+          "maps": [
+            "Full List"
+          ]
+        }
+      },
+      {
+        "title": "Act 1",
+        "content": {
+          "type": "dock",
+          "content": {
+            "type": "layout",
+            "key": "act1"
+          }
+        }
+      },
+      {
+        "title": "Act 2",
+        "content": {
+          "type": "dock",
+          "content": {
+            "type": "layout",
+            "key": "act2"
+          }
+        }
+      },
+      {
+        "title": "Act 3",
+        "content": {
+          "type": "dock",
+          "content": {
+            "type": "layout",
+            "key": "act3"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+    "act2": {
+        "type": "tabbed",
+        "tabs": [
+            {
+                "title": "Autumn Plains",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Autumn Plains"
+                    ]
+                }
+            },
+            {
+                "title": "Skelos Badlands",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Skelos Badlands"
+                    ]
+                }
+            },
+            {
+                "title": "Crystal Glacier",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Crystal Glacier"
+                    ]
+                }
+            },
+            {
+                "title": "Breeze Harbor",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Breeze Harbor"
+                    ]
+                }
+            },
+            {
+                "title": "Zephyr",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Zephyr"
+                    ]
+                }
+            },
+            {
+                "title": "Scorch",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Scorch"
+                    ]
+                }
+            },
+            {
+                "title": "Shady Oasis",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Shady Oasis"
+                    ]
+                }
+            },
+            {
+                "title": "Magma Cone",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Magma Cone"
+                    ]
+                }
+            },
+            {
+                "title": "Fracture Hills",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Fracture Hills"
+                    ]
+                }
+            }
+        ]
+    }
+}
