@@ -1,6 +1,13 @@
 {
     "versions": [
         {
+            "package_version": "0.9.1",
+            "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v0.9.1/Spyro_2_aptracker.zip",
+            "sha256": "5486021ae4cd2325554d05c0671a28defcf5570811b6dd84f4a72dad0676232b",
+            "changelog": [
+                "Fixed version head url"
+            ]
+        },{
             "package_version": "0.9.0",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v0.9.0/Spyro_2_aptracker.zip",
             "sha256": "b6c63eb3c532d91dd428072fefc96b36cb4fb010d0675364e71eff544cb16315",
@@ -11,7 +18,8 @@
                 " - Archipelago Settings: Tracking support for Archipelago goals and settings",
                 " - Logic: Location visibility logic based on Archipelago settings",
                 " - Logic: Location accessibility logic based on game state",
-                " - Autotracking: Support for automatic tracking of items, locations and settings when connected to an Archipelago server"
+                " - Autotracking: Support for automatic tracking of items, locations and settings when connected to an Archipelago server",
+                " - Hints: Support for highlighting nodes that contain hinted locations"
             ]
         }
     ]
