@@ -1,6 +1,13 @@
 {
     "versions": [
         {
+            "package_version": "0.9.2",
+            "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v0.9.2/Spyro_2_aptracker.zip",
+            "sha256": "095b860176f286935ea4fd8d3cc1e0007a99ff43913344395710a636bd02c875",
+            "changelog": [
+                "Fixed Fracture Hills access logic requiring orbs instead of just climb"
+            ]
+        },{
             "package_version": "0.9.1",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v0.9.1/Spyro_2_aptracker.zip",
             "sha256": "5486021ae4cd2325554d05c0671a28defcf5570811b6dd84f4a72dad0676232b",

@@ -337,7 +337,7 @@ function hasMagmaConeAccess()
 end
 
 function hasFractureHillsAccess()
-    if (not hasCrushDefeated()) or (not canPassAutumnDoor()) then
+    if (not hasCrushDefeated()) or (not canReachAutumnSecondHalf()) then
         return false
     end
     if hasOpenWorld() and (not has("fracture_hills_unlock")) then
