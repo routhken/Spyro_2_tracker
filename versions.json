@@ -1,6 +1,13 @@
 {
     "versions": [
         {
+            "package_version": "0.9.3",
+            "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v0.9.3/Spyro_2_aptracker.zip",
+            "sha256": "c892a357a06c1591d01616eb29bb0ebdfc04605b339a3415ec9be069c0ec7197",
+            "changelog": [
+                "Fixed Ripto's Arena access logic not requiring access to Winter Tundra"
+            ]
+        },{
             "package_version": "0.9.2",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v0.9.2/Spyro_2_aptracker.zip",
             "sha256": "095b860176f286935ea4fd8d3cc1e0007a99ff43913344395710a636bd02c875",

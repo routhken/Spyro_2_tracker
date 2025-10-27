@@ -424,6 +424,9 @@ function hasMetropolisAccess()
 end
 
 function hasRiptoAccess()
+    if (not hasGulpDefeated()) then
+        return false
+    end
     if has("setting_logic_ripto_early_on") or (has("setting_logic_ripto_early_with_dj") and has("setting_double_jump_ability_vanilla")) then
         return (canReachWinterSecondHalf() and (maxSparxHealth() >= 3))
     elseif has("setting_logic_ripto_early_with_dj") then
