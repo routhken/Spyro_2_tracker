@@ -240,7 +240,7 @@ function onClear(slotData)
             {"aquaria_towers_gem_",  1235008, 1235144},
             {"sunny_beach_gem_",     1236004, 1236121},
             {"autumn_plains_gem_",   1239007, 1239112},
-            {"skelos_badlands_gem_", 1240010, 1240103},
+            {"skelos_badlands_gem_", 1240009, 1240102},
             {"crystal_glacier_gem_", 1241005, 1241109},
             {"breeze_harbor_gem_",   1242005, 1242101},
             {"zephyr_gem_",          1243006, 1243140},
