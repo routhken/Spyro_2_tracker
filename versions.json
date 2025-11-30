@@ -1,6 +1,13 @@
 {
     "versions": [
         {
+            "package_version": "0.9.5",
+            "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v0.9.5/Spyro_2_aptracker.zip",
+            "sha256": "357df990bad27b6a08828c7b383ad80c026a9b5bf283438427da31cc378d1166",
+            "changelog": [
+                "Fixed second half of Winter Tundra gems requiring magma cone lift instead of headbash"
+            ]
+        },{
             "package_version": "0.9.4",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v0.9.4/Spyro_2_aptracker.zip",
             "sha256": "d3c7161375cec91a818769d55ca77a3671401c08cc7d7770e22c2c727d4f272d",

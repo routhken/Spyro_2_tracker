@@ -740,7 +740,7 @@ function reachableGemCountWinterTundra()
             return 0
         end
         reachable_gems = 139
-        if hasMCElevator() then
+        if hasHeadbash() then
             reachable_gems = reachable_gems + 254
             if canReachRiptoDoor() then
                 reachable_gems = reachable_gems + 7
