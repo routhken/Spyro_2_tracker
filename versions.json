@@ -1,6 +1,14 @@
 {
     "versions": [
         {
+            "package_version": "1.0.0",
+            "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.0.0/Spyro_2_aptracker.zip",
+            "sha256": "07e2fc746ec3b296c49df51f3d89d9bad502c89d22d72f474d17a42045119082",
+            "changelog": [
+                "Finally added gemsanity logic",
+                "Cleaned up the redundant code for gemsanity UI"
+            ]
+        },{
             "package_version": "0.9.5",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v0.9.5/Spyro_2_aptracker.zip",
             "sha256": "357df990bad27b6a08828c7b383ad80c026a9b5bf283438427da31cc378d1166",
