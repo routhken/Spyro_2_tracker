@@ -1,6 +1,13 @@
 {
     "versions": [
         {
+            "package_version": "1.1.1",
+            "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.1.1/Spyro_2_aptracker.zip",
+            "sha256": "e277e2a67d82d79758570e588d222ad77cf14de9153881b8525b1f71439aabed",
+            "changelog": [
+                "Fixed Autumn Plains: End of the Wall logic"
+            ]
+        },{
             "package_version": "1.1.0",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.1.0/Spyro_2_aptracker.zip",
             "sha256": "1be4ffb391a67ada1d7e32173b268bfb32ffe85e57107ac7cdab27a54e5ba278",

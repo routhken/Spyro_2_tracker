@@ -1915,7 +1915,7 @@
                 "name": "Autumn Plains: The end of the wall",
                 "chest_opened_img": "images/ui/Orb_Checked.png",
                 "chest_unopened_img": "images/ui/Orb.png",
-                "access_rules": ["$canReachMetro, $canPassAutumnDoor"]
+                "access_rules": ["$canReachMetro", "$canPassAutumnDoor"]
             },{
                 "name": "Autumn Plains: Long glide!",
                 "chest_opened_img": "images/ui/Orb_Checked.png",
@@ -1976,7 +1976,7 @@
             }
         ]
     },{"name": "The end of the wall","map_locations": [{"map": "Autumn Plains","x": 680,"y": 1497}],"access_rules": ["$hasAutumnPlainsAccess"],"sections": [
-            {"name": "Autumn Plains: The end of the wall","ref": "Autumn Plains/Autumn Plains: The end of the wall","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$canReachMetro, $canPassAutumnDoor"]
+            {"name": "Autumn Plains: The end of the wall","ref": "Autumn Plains/Autumn Plains: The end of the wall","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$canReachMetro", "$canPassAutumnDoor"]
             }]
     },{"name": "Long glide!","map_locations": [{"map": "Autumn Plains","x": 1687,"y": 1378}],"access_rules": ["$hasAutumnPlainsAccess"],"sections": [
             {"name": "Autumn Plains: Long glide!","ref": "Autumn Plains/Autumn Plains: Long glide!","chest_opened_img": "images/ui/Orb_Checked.png","chest_unopened_img": "images/ui/Orb.png","access_rules": ["$canPassAutumnDoor"]
