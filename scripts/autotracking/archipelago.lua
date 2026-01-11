@@ -82,8 +82,8 @@ function onClear(slotData)
 
     -- Reset Settings
     Tracker:FindObjectForCode("goal_option").Active = true
-    Tracker:FindObjectForCode("goal_14_talisman").Active = false
-    Tracker:FindObjectForCode("goal_40_orb").Active = false
+    -- Tracker:FindObjectForCode("goal_14_talisman").Active = false
+    -- Tracker:FindObjectForCode("goal_40_orb").Active = false
     Tracker:FindObjectForCode("goal_64_orb").Active = false
     Tracker:FindObjectForCode("goal_100_percent").Active = false
     Tracker:FindObjectForCode("goal_10_tokens").Active = false
@@ -114,10 +114,10 @@ function onClear(slotData)
 
         if      goalValue == 0 then
             goalTrackerKey = "goal_ripto"
-        elseif  goalValue == 1 then
-            goalTrackerKey = "goal_14_talisman"
-        elseif  goalValue == 2 then
-            goalTrackerKey = "goal_40_orb"
+        -- elseif  goalValue == 1 then
+        --     goalTrackerKey = "goal_14_talisman"
+        -- elseif  goalValue == 2 then
+        --     goalTrackerKey = "goal_40_orb"
         elseif  goalValue == 3 then
             goalTrackerKey = "goal_64_orb"
         elseif  goalValue == 4 then
@@ -128,6 +128,8 @@ function onClear(slotData)
             goalTrackerKey = "goal_all_skillpoints"
         elseif  goalValue == 7 then
             goalTrackerKey = "goal_epilogue"
+        elseif  goalValue == 8 then
+            goalTrackerKey = "goal_orb_hunt"
         end
 
         --print("DEBUG----goalTrackerKey: " .. goalTrackerKey) --debug
@@ -138,8 +140,10 @@ function onClear(slotData)
         end
     end
 
-    Tracker:FindObjectForCode("setting_enable_open_world").Active = false
-    Tracker:FindObjectForCode("setting_open_world_level_unlocks").CurrentStage = 0
+    Tracker:FindObjectForCode("setting_ripto_door_orbs").AcquiredCount = 0
+    Tracker:FindObjectForCode("setting_open_world").Active = false
+    Tracker:FindObjectForCode("setting_level_lock").Active = false
+    Tracker:FindObjectForCode("setting_level_unlocks").AcquiredCount = 0
     Tracker:FindObjectForCode("setting_open_world_ability_and_warp_unlocks").Active = false
     Tracker:FindObjectForCode("setting_enable_25_pct_gem_checks").Active = false
     Tracker:FindObjectForCode("setting_enable_50_pct_gem_checks").Active = false
@@ -152,19 +156,28 @@ function onClear(slotData)
     Tracker:FindObjectForCode("setting_enable_spirit_particle_checks").Active = false
     Tracker:FindObjectForCode("setting_enable_gemsanity").CurrentStage = 0
     Tracker:FindObjectForCode("setting_moneybags_settings").CurrentStage = 0
+    Tracker:FindObjectForCode("setting_deathlink").Active = false
     Tracker:FindObjectForCode("setting_enable_progressive_sparx_health").CurrentStage = 0
     Tracker:FindObjectForCode("setting_enable_progressive_sparx_logic").Active = false
     Tracker:FindObjectForCode("setting_double_jump_ability").CurrentStage = 2
     Tracker:FindObjectForCode("setting_permanent_fireball_ability").CurrentStage = 2
-    Tracker:FindObjectForCode("setting_logic_crush_early").CurrentStage = 0
-    Tracker:FindObjectForCode("setting_logic_gulp_early").CurrentStage = 0
-    Tracker:FindObjectForCode("setting_logic_ripto_early").CurrentStage = 0
+    -- Tracker:FindObjectForCode("setting_logic_crush_early").CurrentStage = 0
+    -- Tracker:FindObjectForCode("setting_logic_gulp_early").CurrentStage = 0
+    -- Tracker:FindObjectForCode("setting_logic_ripto_early").CurrentStage = 0
 
+    if sd_options['ripto_door_orbs'] ~= 0 then
+        Tracker:FindObjectForCode("setting_ripto_door_orbs").AcquiredCount = sd_options['ripto_door_orbs']
+    end
     if sd_options['enable_open_world'] == 1 then
-        Tracker:FindObjectForCode("setting_enable_open_world").Active = true
-        Tracker:FindObjectForCode("setting_open_world_level_unlocks").AcquiredCount = sd_options['open_world_level_unlocks']
+        Tracker:FindObjectForCode("setting_open_world").Active = true
         if sd_options['open_world_ability_and_warp_unlocks'] == 1 then
             Tracker:FindObjectForCode("setting_open_world_ability_and_warp_unlocks").Active = true
+        end
+    end
+    if sd_options['level_lock_options'] == 1 then
+        Tracker:FindObjectForCode("setting_level_lock").Active = true
+        if sd_options['level_unlocks'] ~= 0 then
+            Tracker:FindObjectForCode("setting_level_unlocks").AcquiredCount = sd_options['level_unlocks']
         end
     end
     if sd_options['enable_25_pct_gem_checks'] == 1 then
@@ -199,6 +212,9 @@ function onClear(slotData)
     if sd_options['moneybags_settings'] ~= 0 then
         Tracker:FindObjectForCode("setting_moneybags_settings").CurrentStage = sd_options['moneybags_settings']
     end
+    if sd_options['death_link'] == 1 then
+        Tracker:FindObjectForCode("setting_deathlink").Active = true
+    end
     if sd_options['enable_progressive_sparx_health'] ~= 0 then
         Tracker:FindObjectForCode("setting_enable_progressive_sparx_health").CurrentStage = sd_options['enable_progressive_sparx_health']
         if sd_options['enable_progressive_sparx_health'] ~= 4 then
@@ -213,15 +229,15 @@ function onClear(slotData)
     if sd_options['permanent_fireball_ability'] ~= 0 then
         Tracker:FindObjectForCode("setting_permanent_fireball_ability").CurrentStage = sd_options['permanent_fireball_ability']
     end
-    if sd_options['logic_crush_early'] ~= 0 then
-        Tracker:FindObjectForCode("setting_logic_crush_early").CurrentStage = sd_options['logic_crush_early']
-    end
-    if sd_options['logic_gulp_early'] ~= 0 then
-        Tracker:FindObjectForCode("setting_logic_gulp_early").CurrentStage = sd_options['logic_gulp_early']
-    end
-    if sd_options['logic_ripto_early'] ~= 0 then
-        Tracker:FindObjectForCode("setting_logic_ripto_early").CurrentStage = sd_options['logic_ripto_early']
-    end
+    -- if sd_options['logic_crush_early'] ~= 0 then
+    --     Tracker:FindObjectForCode("setting_logic_crush_early").CurrentStage = sd_options['logic_crush_early']
+    -- end
+    -- if sd_options['logic_gulp_early'] ~= 0 then
+    --     Tracker:FindObjectForCode("setting_logic_gulp_early").CurrentStage = sd_options['logic_gulp_early']
+    -- end
+    -- if sd_options['logic_ripto_early'] ~= 0 then
+    --     Tracker:FindObjectForCode("setting_logic_ripto_early").CurrentStage = sd_options['logic_ripto_early']
+    -- end
 
     --GEMSANITY
     if sd_options['enable_gemsanity'] ~= 0 then

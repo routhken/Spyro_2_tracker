@@ -18,33 +18,33 @@
                         "rows": [
                             [
                                 "goal_option",
-                                "setting_enable_open_world",
-                                "setting_open_world_level_unlocks",
-                                "setting_open_world_ability_and_warp_unlocks",
-                                "setting_enable_25_pct_gem_checks",
-                                "setting_enable_50_pct_gem_checks"
+                                "setting_ripto_door_orbs",
+                                "setting_open_world",
+                                "setting_level_lock",
+                                "setting_level_unlocks",
+                                "setting_open_world_ability_and_warp_unlocks"
                             ],
                             [
+                                "setting_enable_25_pct_gem_checks",
+                                "setting_enable_50_pct_gem_checks",
                                 "setting_enable_75_pct_gem_checks",
                                 "setting_enable_gem_checks",
                                 "setting_enable_total_gem_checks",
-                                "setting_max_total_gem_checks",
-                                "setting_enable_skillpoint_checks",
-                                "setting_enable_life_bottle_checks"
+                                "setting_max_total_gem_checks"
                             ],
                             [
                                 "setting_enable_spirit_particle_checks",
                                 "setting_enable_gemsanity",
                                 "setting_moneybags_settings",
-                                "setting_enable_progressive_sparx_health",
-                                "setting_enable_progressive_sparx_logic",
-                                "setting_double_jump_ability"
+                                "setting_enable_skillpoint_checks",
+                                "setting_enable_life_bottle_checks"
                             ],
                             [
+                                "setting_deathlink",
+                                "setting_enable_progressive_sparx_health",
+                                "setting_enable_progressive_sparx_logic",
                                 "setting_permanent_fireball_ability",
-                                "setting_logic_crush_early",
-                                "setting_logic_gulp_early",
-                                "setting_logic_ripto_early"
+                                "setting_double_jump_ability"
                             ]
                         ]
                     }

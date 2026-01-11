@@ -16,13 +16,13 @@ function hasGoalRipto()
     return has("goal_ripto")
 end
 
-function hasGoalTalisman()
-    return has("goal_14_talisman")
-end
+-- function hasGoalTalisman()
+--     return has("goal_14_talisman")
+-- end
 
-function hasGoal40Orb()
-    return has("goal_40_orb")
-end
+-- function hasGoal40Orb()
+--     return has("goal_40_orb")
+-- end
 
 function hasGoal64Orb()
     return has("goal_64_orb")
@@ -45,7 +45,15 @@ function hasGoalEpilogue()
 end
 
 function hasOpenWorld()
-    return has("setting_enable_open_world")
+    return has("setting_open_world")
+end
+
+function hasOpenAbilityAndWarps()
+    return has("setting_open_world_ability_and_warp_unlocks")
+end
+
+function hasLevelLocks()
+    return has("setting_level_lock")
 end
 
 function hasTotalGems()
@@ -80,17 +88,21 @@ function hasMoneybagsVanilla()
     return has("setting_moneybags_vanilla")
 end
 
-function hasEarlyCrush()
-    return has("setting_logic_crush_early")
+function hasDeathlink()
+    return has("setting_deathlink")
 end
 
-function hasEarlyGulp()
-    return has("setting_logic_gulp_early")
-end
+-- function hasEarlyCrush()
+--     return has("setting_logic_crush_early")
+-- end
 
-function hasEarlyRipto()
-    return has("setting_logic_ripto_early")
-end
+-- function hasEarlyGulp()
+--     return has("setting_logic_gulp_early")
+-- end
+
+-- function hasEarlyRipto()
+--     return has("setting_logic_ripto_early")
+-- end
 
 -- Accessibilty Rules
 function hasCrushDefeated()
@@ -106,15 +118,15 @@ function hasRiptoDefeated()
 end
 
 function hasSwim()
-    return has("swim")
+    return has("swim") or hasRiptoDefeated()
 end
 
 function hasClimb()
-    return has("climb")
+    return has("climb") or hasRiptoDefeated()
 end
 
 function hasHeadbash()
-    return has("headbash")
+    return has("headbash") or hasRiptoDefeated()
 end
 
 function hasDoubleJump()
@@ -150,50 +162,50 @@ function canReachWinterSecondHalf()
 end
 
 function canReachRiptoDoor()
-    return has_at_least("orb",40)
+    return has_at_least("orb",Tracker:FindObjectForCode("setting_ripto_door_orbs").AcquiredCount)
 end
 
 function hasAquariaWall()
-    return has("money_at_wall")
+    return has("money_at_wall") or hasRiptoDefeated()
 end
 
 function hasAquariaSub()
-    return has("money_at_sub")
+    return has("money_at_sub") or hasRiptoDefeated()
 end
 
 function hasSOPortal()
-    return has("money_so_portal")
+    return has("money_so_portal") or hasRiptoDefeated()
 end
 
 function hasCGBridge()
-    return has("money_cg_bridge")
+    return has("money_cg_bridge") or hasRiptoDefeated()
 end
 
 function hasMCElevator()
-    return has("money_mc_elevator")
+    return has("money_mc_elevator") or hasRiptoDefeated()
 end
 
 function hasZPortal()
-    return has("money_z_portal")
+    return has("money_z_portal") or hasRiptoDefeated()
 end
 
 function hasISPortal()
-    return has("money_is_portal")
+    return has("money_is_portal") or hasRiptoDefeated()
 end
 
 function hasCSPortal()
-    return has("money_cs_portal")
+    return has("money_cs_portal") or hasRiptoDefeated()
 end
 
 function hasIdolSpringsAccess()
-    if hasOpenWorld() and (not has("idol_springs_unlock")) then
+    if hasLevelLocks() and (not has("idol_springs_unlock")) then
         return false
     end
     return true
 end
 
 function hasColossusAccess()
-    if hasOpenWorld() and (not has("colossus_unlock")) then
+    if hasLevelLocks() and (not has("colossus_unlock")) then
         return false
     end
     return true
@@ -203,7 +215,7 @@ function hasHurricosAccess()
     if not canReachSummerSecondHalf() then
         return false
     end
-    if hasOpenWorld() and (not has("hurricos_unlock")) then
+    if hasLevelLocks() and (not has("hurricos_unlock")) then
         return false
     end
     return true
@@ -213,7 +225,7 @@ function hasAquariaTowersAccess()
     if (not canReachSummerSecondHalf()) or (not hasAquariaWall()) or (not (maxSparxHealth() >= 1)) then
         return false
     end
-    if hasOpenWorld() and (not has("aquaria_towers_unlock")) then
+    if hasLevelLocks() and (not has("aquaria_towers_unlock")) then
         return false
     end
     return true
@@ -223,7 +235,7 @@ function hasSunnyBeachAccess()
     if not canReachSummerSecondHalf() then
         return false
     end
-    if hasOpenWorld() and (not has("sunny_beach_unlock")) then
+    if hasLevelLocks() and (not has("sunny_beach_unlock")) then
         return false
     end
     return true
@@ -233,206 +245,206 @@ function hasOceanSpeedwayAccess()
     if (not canReachSummerSecondHalf()) or (not has_at_least("orb",3)) then
         return false
     end
-    if hasOpenWorld() and (not has("ocean_speedway_unlock")) then
+    if hasLevelLocks() and (not has("ocean_speedway_unlock")) then
         return false
     end
     return true
 end
 
 function hasCrushAccess()
-    if hasOpenWorld() or has("setting_logic_crush_early_on") or (has("setting_logic_crush_early_with_dj") and has("setting_double_jump_ability_vanilla")) then
+    if hasOpenWorld() then -- or has("setting_logic_crush_early_on") or (has("setting_logic_crush_early_with_dj") and has("setting_double_jump_ability_vanilla")) then
         return (canReachSummerSecondHalf() and (maxSparxHealth() >= 1))
-    elseif has("setting_logic_crush_early_with_dj") then
-        return (canReachSummerSecondHalf() and (maxSparxHealth() >= 1) and hasDoubleJump() and has_at_least("summer_talisman",6))
+    -- elseif has("setting_logic_crush_early_with_dj") then
+    --     return (canReachSummerSecondHalf() and (maxSparxHealth() >= 1) and hasDoubleJump() and has_at_least("summer_talisman",6))
     else
         return (canReachSummerSecondHalf() and (maxSparxHealth() >= 1) and has_at_least("summer_talisman",6))
     end
 end
 
 function hasAutumnPlainsAccess()
-    if not hasCrushDefeated() then
+    if not (hasOpenWorld() and hasOpenAbilityAndWarps()) and not hasCrushDefeated() then
         return false
     end
     return true
 end
 
 function hasSkelosBadlandsAccess()
-    if (not hasCrushDefeated()) or (not (maxSparxHealth() >= 2)) then
+    if (not hasAutumnPlainsAccess()) or (not (maxSparxHealth() >= 2)) then
         return false
     end
-    if hasOpenWorld() and (not has("skelos_badlands_unlock")) then
+    if hasLevelLocks() and (not has("skelos_badlands_unlock")) then
         return false
     end
     return true
 end
 
 function hasCrystalGlacierAccess()
-    if not hasCrushDefeated() then
+    if not hasAutumnPlainsAccess() then
         return false
     end
-    if hasOpenWorld() and (not has("crystal_glacier_unlock")) then
+    if hasLevelLocks() and (not has("crystal_glacier_unlock")) then
         return false
     end
     return true
 end
 
 function hasBreezeHarborAccess()
-    if not hasCrushDefeated() then
+    if not hasAutumnPlainsAccess() then
         return false
     end
-    if hasOpenWorld() and (not has("breeze_harbor_unlock")) then
+    if hasLevelLocks() and (not has("breeze_harbor_unlock")) then
         return false
     end
     return true
 end
 
 function hasZephyrAccess()
-    if (not hasCrushDefeated()) or (not hasZPortal()) then
+    if (not hasAutumnPlainsAccess()) or (not hasZPortal()) then
         return false
     end
-    if hasOpenWorld() and (not has("zephyr_unlock")) then
+    if hasLevelLocks() and (not has("zephyr_unlock")) then
         return false
     end
     return true
 end
 
 function hasMetroSpeedwayAccess()
-    if (not hasCrushDefeated()) or (not canReachMetro()) then
+    if (not hasAutumnPlainsAccess()) or (not canReachMetro()) then
         return false
     end
-    if hasOpenWorld() and (not has("metro_speedway_unlock")) then
+    if hasLevelLocks() and (not has("metro_speedway_unlock")) then
         return false
     end
     return true
 end
 
 function hasScorchAccess()
-    if (not hasCrushDefeated()) or (not canReachAutumnSecondHalf()) then
+    if (not hasAutumnPlainsAccess()) or (not canReachAutumnSecondHalf()) then
         return false
     end
-    if hasOpenWorld() and (not has("scorch_unlock")) then
+    if hasLevelLocks() and (not has("scorch_unlock")) then
         return false
     end
     return true
 end
 
 function hasShadyOasisAccess()
-    if (not hasCrushDefeated()) or (not canPassAutumnDoor()) or (not hasSOPortal()) then
+    if (not hasAutumnPlainsAccess()) or (not canPassAutumnDoor()) or (not hasSOPortal()) then
         return false
     end
-    if hasOpenWorld() and (not has("shady_oasis_unlock")) then
+    if hasLevelLocks() and (not has("shady_oasis_unlock")) then
         return false
     end
     return true
 end
 
 function hasMagmaConeAccess()
-    if (not hasCrushDefeated()) or (not canPassAutumnDoor()) then
+    if (not hasAutumnPlainsAccess()) or (not canPassAutumnDoor()) then
         return false
     end
-    if hasOpenWorld() and (not has("magma_cone_unlock")) then
+    if hasLevelLocks() and (not has("magma_cone_unlock")) then
         return false
     end
     return true
 end
 
 function hasFractureHillsAccess()
-    if (not hasCrushDefeated()) or (not canReachAutumnSecondHalf()) then
+    if (not hasAutumnPlainsAccess()) or (not canReachAutumnSecondHalf()) then
         return false
     end
-    if hasOpenWorld() and (not has("fracture_hills_unlock")) then
+    if hasLevelLocks() and (not has("fracture_hills_unlock")) then
         return false
     end
     return true
 end
 
 function hasIcySpeedwayAccess()
-    if (not hasCrushDefeated()) or (not canPassAutumnDoor()) or (not hasISPortal()) then
+    if (not hasAutumnPlainsAccess()) or (not canPassAutumnDoor()) or (not hasISPortal()) then
         return false
     end
-    if hasOpenWorld() and (not has("icy_speedway_unlock")) then
+    if hasLevelLocks() and (not has("icy_speedway_unlock")) then
         return false
     end
     return true
 end
 
 function hasGulpAccess()
-    if hasOpenWorld() or has("setting_logic_gulp_early_on") or (has("setting_logic_gulp_early_with_dj") and has("setting_double_jump_ability_vanilla")) then
+    if hasOpenWorld() then -- or has("setting_logic_gulp_early_on") or (has("setting_logic_gulp_early_with_dj") and has("setting_double_jump_ability_vanilla")) then
         return (canPassAutumnDoor() and (maxSparxHealth() >= 2))
-    elseif has("setting_logic_gulp_early_with_dj") then
-        return (canPassAutumnDoor() and (maxSparxHealth() >= 2) and hasDoubleJump() and has_at_least("summer_talisman",6) and has_at_least("autumn_talisman",8))
+    -- elseif has("setting_logic_gulp_early_with_dj") then
+    --     return (canPassAutumnDoor() and (maxSparxHealth() >= 2) and hasDoubleJump() and has_at_least("summer_talisman",6) and has_at_least("autumn_talisman",8))
     else
         return (canPassAutumnDoor() and (maxSparxHealth() >= 2) and has_at_least("summer_talisman",6) and has_at_least("autumn_talisman",8))
     end
 end
 
 function hasWinterTundraAccess()
-    if not hasGulpDefeated() then
+    if not (hasOpenWorld() and hasOpenAbilityAndWarps()) and not hasGulpDefeated() then
         return false
     end
     return true
 end
 
 function hasMysticMarshAccess()
-    if not hasGulpDefeated() then
+    if not hasWinterTundraAccess() then
         return false
     end
-    if hasOpenWorld() and (not has("mystic_marsh_unlock")) then
+    if hasLevelLocks() and (not has("mystic_marsh_unlock")) then
         return false
     end
     return true
 end
 
 function hasCloudTemplesAccess()
-    if (not hasGulpDefeated()) or (not has_at_least("orb",15)) then
+    if (not hasWinterTundraAccess()) or (not has_at_least("orb",15)) then
         return false
     end
-    if hasOpenWorld() and (not has("cloud_temples_unlock")) then
+    if hasLevelLocks() and (not has("cloud_temples_unlock")) then
         return false
     end
     return true
 end
 
 function hasCanyonSpeedwayAccess()
-    if (not hasGulpDefeated()) or (not hasCSPortal()) then
+    if (not hasWinterTundraAccess()) or (not hasCSPortal()) then
         return false
     end
-    if hasOpenWorld() and (not has("canyon_speedway_unlock")) then
+    if hasLevelLocks() and (not has("canyon_speedway_unlock")) then
         return false
     end
     return true
 end
 
 function hasRoboticaFarmsAccess()
-    if (not hasGulpDefeated()) or (not canReachWinterSecondHalf()) then
+    if (not hasWinterTundraAccess()) or (not canReachWinterSecondHalf()) then
         return false
     end
-    if hasOpenWorld() and (not has("robotica_farms_unlock")) then
+    if hasLevelLocks() and (not has("robotica_farms_unlock")) then
         return false
     end
     return true
 end
 
 function hasMetropolisAccess()
-    if (not hasGulpDefeated()) or (not canReachWinterSecondHalf()) or (not has_at_least("orb",25)) then
+    if (not hasWinterTundraAccess()) or (not canReachWinterSecondHalf()) or (not has_at_least("orb",25)) then
         return false
     end
-    if hasOpenWorld() and (not has("metropolis_unlock")) then
+    if hasLevelLocks() and (not has("metropolis_unlock")) then
         return false
     end
     return true
 end
 
 function hasRiptoAccess()
-    if (not hasGulpDefeated()) then
+    if (not hasWinterTundraAccess()) then
         return false
-    end
-    if has("setting_logic_ripto_early_on") or (has("setting_logic_ripto_early_with_dj") and has("setting_double_jump_ability_vanilla")) then
-        return (canReachWinterSecondHalf() and (maxSparxHealth() >= 3))
-    elseif has("setting_logic_ripto_early_with_dj") then
-        return (canReachWinterSecondHalf() and (maxSparxHealth() >= 3) and hasDoubleJump() and has_at_least("orb",40))
+    -- end
+    -- if has("setting_logic_ripto_early_on") or (has("setting_logic_ripto_early_with_dj") and has("setting_double_jump_ability_vanilla")) then
+    --     return (canReachWinterSecondHalf() and (maxSparxHealth() >= 3))
+    -- elseif has("setting_logic_ripto_early_with_dj") then
+    --     return (canReachWinterSecondHalf() and (maxSparxHealth() >= 3) and hasDoubleJump() and has_at_least("orb",40))
     else
-        return (canReachWinterSecondHalf() and (maxSparxHealth() >= 3) and has_at_least("orb",40))
+        return (canReachWinterSecondHalf() and (maxSparxHealth() >= 3) and canReachRiptoDoor())
     end
 end
 
@@ -443,7 +455,7 @@ function hasDragonShoresAccess()
     if (not has_at_least("orb",55)) or (not canReachTotalGemCount(8000)) then
         return false
     end
-    if hasOpenWorld() and (not has("aquaria_towers_unlock")) then
+    if hasLevelLocks() and (not has("aquaria_towers_unlock")) then
         return false
     end
     return true

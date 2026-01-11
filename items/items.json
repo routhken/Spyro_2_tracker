@@ -342,13 +342,30 @@
         "codes": "goal_option"
     },
     {
+        "name": "Setting: Ripto Door Orb Requirement",
+        "type": "consumable",
+        "img": "/images/ui/Orb.png",
+        "max_quantity": 64,
+        "increment": 1,
+        "decrement": 1,
+        "initial_quantity": 0,
+        "overlay_font_size": 20,
+        "codes": "setting_ripto_door_orbs"
+    },
+    {
         "name": "Setting: Open World",
         "type": "toggle",
         "img": "/images/settings/Portal.png",
-        "codes": "setting_enable_open_world"
+        "codes": "setting_open_world"
     },
     {
-        "name": "Setting: Open World Level Unlocks",
+        "name": "Setting: Level Locks",
+        "type": "toggle",
+        "img": "/images/settings/Portal.png",
+        "codes": "setting_level_lock"
+    },
+    {
+        "name": "Setting: Level Unlocks",
         "type": "consumable",
         "img": "/images/settings/Portal.png",
         "max_quantity": 22,
@@ -356,7 +373,7 @@
         "decrement": 1,
         "initial_quantity": 0,
         "overlay_font_size": 20,
-        "codes": "setting_open_world_level_unlocks"
+        "codes": "setting_level_unlocks"
     },
     {
         "name": "Setting: Open World Abilities and Warps",
@@ -480,6 +497,12 @@
         "codes": "setting_moneybags_settings"
     },
     {
+        "name": "Setting: Deathlink",
+        "type": "toggle",
+        "img": "/images/settings/Deathlink.png",
+        "codes": "setting_deathlink"
+    },
+    {
         "name": "Setting: Progressive Sparx",
         "type": "progressive",
         "allow_disabled": false,
@@ -586,90 +609,6 @@
             }
         ],
         "codes": "setting_permanent_fireball_ability"
-    },
-    {
-        "name": "Setting: Crush Logic Early",
-        "type": "progressive",
-        "allow_disabled": false,
-        "loop": false,
-        "initial_stage_idx": 0,
-        "stages": [
-            {
-                "name": "Setting: Crush Logic Early Off",
-                "img": "/images/settings/Boss_Crush_Off.png",
-                "codes": "setting_logic_crush_early_off",
-                "inherit_codes": false
-            },
-            {
-                "name": "Setting: Crush Logic Early On With Double Jump",
-                "img": "/images/settings/Boss_Crush.png",
-                "codes": "setting_logic_crush_early_with_dj",
-                "inherit_codes": false
-            },
-            {
-                "name": "Setting: Crush Logic Early Always On",
-                "img": "/images/settings/Boss_Crush.png",
-                "codes": "setting_logic_crush_early_on",
-                "inherit_codes": false
-            }
-        ],
-        "codes": "setting_logic_crush_early"
-    },
-    {
-        "name": "Setting: Gulp Logic Early",
-        "type": "progressive",
-        "allow_disabled": false,
-        "loop": false,
-        "initial_stage_idx": 0,
-        "stages": [
-            {
-                "name": "Setting: Gulp Logic Early Off",
-                "img": "/images/settings/Boss_Gulp_Off.png",
-                "codes": "setting_logic_gulp_early_off",
-                "inherit_codes": false
-            },
-            {
-                "name": "Setting: Gulp Logic Early On With Double Jump",
-                "img": "/images/settings/Boss_Gulp.png",
-                "codes": "setting_logic_gulp_early_with_dj",
-                "inherit_codes": false
-            },
-            {
-                "name": "Setting: Gulp Logic Early Always On",
-                "img": "/images/settings/Boss_Gulp.png",
-                "codes": "setting_logic_gulp_early_on",
-                "inherit_codes": false
-            }
-        ],
-        "codes": "setting_logic_gulp_early"
-    },
-    {
-        "name": "Setting: Ripto Logic Early",
-        "type": "progressive",
-        "allow_disabled": false,
-        "loop": false,
-        "initial_stage_idx": 0,
-        "stages": [
-            {
-                "name": "Setting: Ripto Logic Early Off",
-                "img": "/images/settings/Boss_Ripto_Off.png",
-                "codes": "setting_logic_ripto_early_off",
-                "inherit_codes": false
-            },
-            {
-                "name": "Setting: Ripto Logic Early On With Double Jump",
-                "img": "/images/settings/Boss_Ripto.png",
-                "codes": "setting_logic_ripto_early_with_dj",
-                "inherit_codes": false
-            },
-            {
-                "name": "Setting: Ripto Logic Early Always On",
-                "img": "/images/settings/Boss_Ripto.png",
-                "codes": "setting_logic_ripto_early_on",
-                "inherit_codes": false
-            }
-        ],
-        "codes": "setting_logic_ripto_early"
     },
     {
         "name": "Inventory: Summer Forest Gems",

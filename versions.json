@@ -1,6 +1,15 @@
 {
     "versions": [
         {
+            "package_version": "1.1.0",
+            "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.1.0/Spyro_2_aptracker.zip",
+            "sha256": "1be4ffb391a67ada1d7e32173b268bfb32ffe85e57107ac7cdab27a54e5ba278",
+            "changelog": [
+                "Updated tracker logic for apworld v1.0.0 release",
+                "Added settings added in new apworld release",
+                "Fixed Skelos Badlands spirit particle not marking as sent"
+            ]
+        },{
             "package_version": "1.0.0",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.0.0/Spyro_2_aptracker.zip",
             "sha256": "07e2fc746ec3b296c49df51f3d89d9bad502c89d22d72f474d17a42045119082",
