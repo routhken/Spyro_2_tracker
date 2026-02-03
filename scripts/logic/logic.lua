@@ -106,11 +106,11 @@ end
 
 -- Accessibilty Rules
 function hasCrushDefeated()
-    return has("crush_defeated")
+    return has("crush_defeated") or (hasOpenWorld() and hasOpenAbilityAndWarps())
 end
 
 function hasGulpDefeated()
-    return has("gulp_defeated")
+    return has("gulp_defeated") or (hasOpenWorld() and hasOpenAbilityAndWarps())
 end
 
 function hasRiptoDefeated()

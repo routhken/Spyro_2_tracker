@@ -53,13 +53,36 @@
     },
     {
         "name": "Progressive Sparx Health Upgrade",
-        "type": "consumable",
-        "img": "/images/items/Gold Sparx.png",
-        "max_quantity": 3,
-        "increment": 1,
-        "decrement": 1,
-        "initial_quantity": 0,
-        "overlay_font_size": 20,
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": false,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "name": "Sparxless",
+                "img": "/images/settings/Sparxless.png",
+                "codes": "progressive_sparx_sparxless",
+                "inherit_codes": false
+            },
+            {
+                "name": "Green Sparx",
+                "img": "/images/settings/Green Sparx.png",
+                "codes": "progressive_sparx_green",
+                "inherit_codes": false
+            },
+            {
+                "name": "Blue Sparx",
+                "img": "/images/settings/Blue Sparx.png",
+                "codes": "progressive_sparx_blue",
+                "inherit_codes": false
+            },
+            {
+                "name": "Gold Sparx",
+                "img": "/images/settings/Gold Sparx.png",
+                "codes": "progressive_sparx_gold",
+                "inherit_codes": false
+            }
+        ],
         "codes": "progressive_sparx"
     },
     {

@@ -164,6 +164,7 @@ function onClear(slotData)
     -- Tracker:FindObjectForCode("setting_logic_crush_early").CurrentStage = 0
     -- Tracker:FindObjectForCode("setting_logic_gulp_early").CurrentStage = 0
     -- Tracker:FindObjectForCode("setting_logic_ripto_early").CurrentStage = 0
+    Tracker:FindObjectForCode("progressive_sparx").CurrentStage = 0
 
     if sd_options['ripto_door_orbs'] ~= 0 then
         Tracker:FindObjectForCode("setting_ripto_door_orbs").AcquiredCount = sd_options['ripto_door_orbs']
@@ -215,19 +216,25 @@ function onClear(slotData)
     if sd_options['death_link'] == 1 then
         Tracker:FindObjectForCode("setting_deathlink").Active = true
     end
-    if sd_options['enable_progressive_sparx_health'] ~= 0 then
-        Tracker:FindObjectForCode("setting_enable_progressive_sparx_health").CurrentStage = sd_options['enable_progressive_sparx_health']
-        if sd_options['enable_progressive_sparx_health'] ~= 4 then
+    Tracker:FindObjectForCode("setting_enable_progressive_sparx_health").CurrentStage = sd_options['enable_progressive_sparx_health']
+    if sd_options['enable_progressive_sparx_health'] ~= 4 then
+        Tracker:FindObjectForCode("progressive_sparx").CurrentStage = 3 - sd_options['enable_progressive_sparx_health']
+        if sd_options['enable_progressive_sparx_health'] ~= 0 then
             if sd_options['enable_progressive_sparx_logic'] == 1 then
                 Tracker:FindObjectForCode("setting_enable_progressive_sparx_logic").Active = true
             end
         end
     end
-    if sd_options['double_jump_ability'] ~= 0 then
-        Tracker:FindObjectForCode("setting_double_jump_ability").CurrentStage = sd_options['double_jump_ability']
+    Tracker:FindObjectForCode("setting_double_jump_ability").CurrentStage = sd_options['double_jump_ability']
+    if sd_options['double_jump_ability'] == 0 then
+        Tracker:FindObjectForCode("double_jump").Active = true
     end
-    if sd_options['permanent_fireball_ability'] ~= 0 then
-        Tracker:FindObjectForCode("setting_permanent_fireball_ability").CurrentStage = sd_options['permanent_fireball_ability']
+    Tracker:FindObjectForCode("setting_permanent_fireball_ability").CurrentStage = sd_options['permanent_fireball_ability']
+    if sd_options['permanent_fireball_ability'] == 0 then
+        Tracker:FindObjectForCode("infinite_fireball").Active = true
+    end
+    if sd_options['permanent_fireball_ability'] == 3 then
+        Tracker:FindObjectForCode("infinite_fireball").Active = true
     end
     -- if sd_options['logic_crush_early'] ~= 0 then
     --     Tracker:FindObjectForCode("setting_logic_crush_early").CurrentStage = sd_options['logic_crush_early']
@@ -385,6 +392,7 @@ function onItem(index, itemId, itemName, playerNumber)
     end
 
     local trackerItemObject = Tracker:FindObjectForCode(itemObject[1])
+    print(string.format("DEBUG: onItem item type %s for code %s", itemObject[2], itemObject[1]))
 
     if trackerItemObject then
         if itemObject[2] == "toggle" then

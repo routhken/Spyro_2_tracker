@@ -1,6 +1,16 @@
 {
     "versions": [
         {
+            "package_version": "1.1.2",
+            "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.1.2/Spyro_2_aptracker.zip",
+            "sha256": "916b3df52041d9e40d1cb52349d0b4c14ec63f89e33faa880857e18f607c3316",
+            "changelog": [
+                "Improved readability of sparx, infinite fireball, and double jump items",
+                "Sparx icon in the progressive items section now reflects your current health limit",
+                "Infinite fireball icon is lit if you start with it",
+                "Double jump icon is lit if you enable vanilla behavior"
+            ]
+        },{
             "package_version": "1.1.1",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.1.1/Spyro_2_aptracker.zip",
             "sha256": "e277e2a67d82d79758570e588d222ad77cf14de9153881b8525b1f71439aabed",
