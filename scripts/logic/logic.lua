@@ -137,7 +137,7 @@ function maxSparxHealth()
     if not has("setting_enable_progressive_sparx_logic") then
         return 3
     else
-        return (3 - Tracker:FindObjectForCode("setting_enable_progressive_sparx_health").CurrentStage + Tracker:FindObjectForCode("progressive_sparx").AcquiredCount)
+        return Tracker:FindObjectForCode("progressive_sparx").CurrentStage
     end
 end
 
