@@ -154,17 +154,17 @@
                 "name": "Summer Forest: Gem 33","visibility_rules": ["summer_forest_gem_33"]},{
                 "name": "Summer Forest: Gem 34","visibility_rules": ["summer_forest_gem_34"]},{
                 "name": "Summer Forest: Gem 35","visibility_rules": ["summer_forest_gem_35"]},{
-                "name": "Summer Forest: Gem 36","access_rules": ["$canReachSummerSecondHalf, $hasAquariaWall"],"visibility_rules": ["summer_forest_gem_36"]},{
+                "name": "Summer Forest: Gem 36","visibility_rules": ["summer_forest_gem_36"]},{
                 "name": "Summer Forest: Gem 37","visibility_rules": ["summer_forest_gem_37"]},{
                 "name": "Summer Forest: Gem 38","visibility_rules": ["summer_forest_gem_38"]},{
-                "name": "Summer Forest: Gem 39","access_rules": ["$canReachSummerSecondHalf, $hasAquariaWall"],"visibility_rules": ["summer_forest_gem_39"]},{
-                "name": "Summer Forest: Gem 40","access_rules": ["$hasSwim"],"visibility_rules": ["summer_forest_gem_40"]},{
+                "name": "Summer Forest: Gem 39","visibility_rules": ["summer_forest_gem_39"]},{
+                "name": "Summer Forest: Gem 40","visibility_rules": ["summer_forest_gem_40"]},{
                 "name": "Summer Forest: Gem 41","access_rules": ["$hasSwim"],"visibility_rules": ["summer_forest_gem_41"]},{
                 "name": "Summer Forest: Gem 42","access_rules": ["$hasSwim"],"visibility_rules": ["summer_forest_gem_42"]},{
                 "name": "Summer Forest: Gem 43","access_rules": ["$hasSwim"],"visibility_rules": ["summer_forest_gem_43"]},{
                 "name": "Summer Forest: Gem 44","access_rules": ["$hasSwim"],"visibility_rules": ["summer_forest_gem_44"]},{
                 "name": "Summer Forest: Gem 45","access_rules": ["$hasSwim"],"visibility_rules": ["summer_forest_gem_45"]},{
-                "name": "Summer Forest: Gem 46","visibility_rules": ["summer_forest_gem_46"]},{
+                "name": "Summer Forest: Gem 46","access_rules": ["$hasSwim"],"visibility_rules": ["summer_forest_gem_46"]},{
                 "name": "Summer Forest: Gem 47","visibility_rules": ["summer_forest_gem_47"]},{
                 "name": "Summer Forest: Gem 48","visibility_rules": ["summer_forest_gem_48"]},{
                 "name": "Summer Forest: Gem 49","visibility_rules": ["summer_forest_gem_49"]},{
@@ -204,7 +204,7 @@
                 "name": "Summer Forest: Gem 83","access_rules": ["$canReachSummerSecondHalf, $hasClimb"],"visibility_rules": ["summer_forest_gem_83"]},{
                 "name": "Summer Forest: Gem 84","access_rules": ["$canReachSummerSecondHalf, $hasClimb"],"visibility_rules": ["summer_forest_gem_84"]},{
                 "name": "Summer Forest: Gem 85","access_rules": ["$canReachSummerSecondHalf, $hasClimb"],"visibility_rules": ["summer_forest_gem_85"]},{
-                "name": "Summer Forest: Gem 86","visibility_rules": ["summer_forest_gem_86"]},{
+                "name": "Summer Forest: Gem 86","access_rules": ["$canReachSummerSecondHalf, $hasAquariaWall"],"visibility_rules": ["summer_forest_gem_86"]},{
                 "name": "Summer Forest: Gem 87","visibility_rules": ["summer_forest_gem_87"]},{
                 "name": "Summer Forest: Gem 88","visibility_rules": ["summer_forest_gem_88"]},{
                 "name": "Summer Forest: Gem 89","visibility_rules": ["summer_forest_gem_89"]},{

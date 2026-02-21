@@ -1,6 +1,13 @@
 {
     "versions": [
         {
+            "package_version": "1.1.5",
+            "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.1.5/Spyro_2_aptracker.zip",
+            "sha256": "ed55537dbfa916bc7fcda4fd251c9be48c09d54dda470bab298862ede1bf50f7",
+            "changelog": [
+                "Updated summer forest gems 36, 39, 40, 46, and 86 to match logic in apworld version 1.1.0"
+            ]
+        },{
             "package_version": "1.1.4",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.1.4/Spyro_2_aptracker.zip",
             "sha256": "d73beeb09745b806bcb4419f29ee23dc416fa7a66f664cc9b4c04403b666735c",
