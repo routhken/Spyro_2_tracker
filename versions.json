@@ -1,6 +1,17 @@
 {
     "versions": [
         {
+            "package_version": "1.2.0",
+            "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.2.0/Spyro_2_aptracker.zip",
+            "sha256": "8e236f0500294cbc6d179d36ccdec15c8b480dc97ef41d0790cd9605ccec85e9",
+            "changelog": [
+                "Added trick logic to match logic in apworld version 1.2.0",
+                "Added clarifying labels to icons in the settings tab for open world, level locks, warps, fireball, and double jump",
+                "Added a new section in the settings tab for all the currently supported tricks",
+                "Reworked much of logic.lua",
+                "Made locations blocked by sparx logic show as yellow instead of red"
+            ]
+        },{
             "package_version": "1.1.5",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.1.5/Spyro_2_aptracker.zip",
             "sha256": "ed55537dbfa916bc7fcda4fd251c9be48c09d54dda470bab298862ede1bf50f7",

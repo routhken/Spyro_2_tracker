@@ -103,6 +103,16 @@
                         "type": "layout",
                         "key": "gem_inventory_layout"
                     }
+                },
+                {
+                    "type": "group",
+                    "header": "Trick Settings",
+                    "dock": "bottom",
+                    "margin": "0,0,3,0",
+                    "content": {
+                        "type": "layout",
+                        "key": "trick_settings_layout"
+                    }
                 }
             ]
         }

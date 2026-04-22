@@ -21,8 +21,8 @@
                                 "setting_ripto_door_orbs",
                                 "setting_open_world",
                                 "setting_level_lock",
-                                "setting_level_unlocks",
-                                "setting_open_world_ability_and_warp_unlocks"
+                                "setting_open_world_warp_unlocks",
+                                "setting_start_with_abilities"
                             ],
                             [
                                 "setting_enable_25_pct_gem_checks",
@@ -95,6 +95,86 @@
                                 "inventory_gems_clou",
                                 "inventory_gems_robo",
                                 "inventory_gems_metr"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "trick_settings_layout": {
+        "type": "array",
+        "orientation": "vertical",
+        "margin": "0,0",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "margin": "0,0",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "item_size": "6, 3",
+                        "item_margin": "2, 6",
+                        "item_h_alignment": "center",
+                        "h_alignment": "left",
+                        "rows": [
+                            [
+                                "setting_trick_difficulty",
+                                "setting_shady_require_headbash",
+                                "setting_fracture_require_headbash",
+                                "setting_fracture_easy_earthshapers"
+                            ],
+                            [
+                                "setting_trick_logic_sf_ledge_double_jump",
+                                "setting_trick_logic_sf_second_half_double_jump",
+                                "setting_trick_logic_sf_second_half_nothing",
+                                "setting_trick_logic_sf_swim_in_air",
+                                "setting_trick_logic_sf_frog_proxy",
+                                "setting_trick_logic_sf_aquaria_wall_double_jump",
+                                "setting_trick_logic_sf_aquaria_wall_nothing"
+                            ],
+                            [
+                                "setting_trick_logic_indoor_lamps_double_jump",
+                                "setting_trick_logic_indoor_lamps_fireball",
+                                "setting_trick_logic_indoor_lamps_superfly",
+                                "setting_trick_logic_sb_first_turtle",
+                                "setting_trick_logic_sb_final_turtle",
+                                "setting_trick_logic_sb_double_jump_ladder_skip",
+                                "setting_trick_logic_sb_nothing_ladder_skip"
+                            ],
+                            [
+                                "setting_trick_logic_at_first_tunnel_double_jump",
+                                "setting_trick_logic_at_talisman_area_double_jump",
+                                "setting_trick_logic_at_sheep_proxy",
+                                "setting_trick_logic_at_button_three_fireball",
+                                "setting_trick_logic_at_royal_children_oob",
+                                "setting_trick_logic_at_gems_oob"
+                            ],
+                            [
+                                "setting_trick_logic_ap_zephyr_double_jump",
+                                "setting_trick_logic_ap_climb_skip",
+                                "setting_trick_logic_ap_door_skip",
+                                "setting_trick_logic_crystal_bridge_double_jump",
+                                "setting_trick_logic_crystal_bridge_snowball_proxy",
+                                "setting_trick_logic_zephyr_ladder_double_jump"
+                            ],
+                            [
+                                "setting_trick_logic_mc_start_double_jump",
+                                "setting_trick_logic_mc_start_nothing",
+                                "setting_trick_logic_mc_second_level_double_jump",
+                                "setting_trick_logic_mc_popcorn_double_jump",
+                                "setting_trick_logic_mc_moneybags_double_jump",
+                                "setting_trick_logic_mc_elevator_double_jump"
+                            ],
+                            [
+                                "setting_trick_logic_wt_castle_double_jump",
+                                "setting_trick_logic_wt_castle_penguin_proxy",
+                                "setting_trick_logic_wt_oob_double_jump",
+                                "setting_trick_logic_wt_oob_nothing",
+                                "setting_trick_logic_wt_swim_from_oob",
+                                "setting_trick_logic_wt_glide_from_oob",
+                                "setting_trick_logic_metropolis_ox_superfly"
                             ]
                         ]
                     }

@@ -11,6 +11,10 @@ function has_at_least(item, amount)
     return Tracker:ProviderCountForCode(item) >= amount
 end
 
+function has_exactly(item, amount)
+    return Tracker:ProviderCountForCode(item) == amount
+end
+
 -- Visibility Rules
 function hasGoalRipto()
     return has("goal_ripto")
@@ -49,7 +53,7 @@ function hasOpenWorld()
 end
 
 function hasOpenAbilityAndWarps()
-    return has("setting_open_world_ability_and_warp_unlocks")
+    return has("setting_open_world_warp_unlocks")
 end
 
 function hasLevelLocks()
@@ -92,18 +96,6 @@ function hasDeathlink()
     return has("setting_deathlink")
 end
 
--- function hasEarlyCrush()
---     return has("setting_logic_crush_early")
--- end
-
--- function hasEarlyGulp()
---     return has("setting_logic_gulp_early")
--- end
-
--- function hasEarlyRipto()
---     return has("setting_logic_ripto_early")
--- end
-
 -- Accessibilty Rules
 function hasCrushDefeated()
     return has("crush_defeated") or (hasOpenWorld() and hasOpenAbilityAndWarps())
@@ -133,16 +125,30 @@ function hasDoubleJump()
     return has("double_jump")
 end
 
+function hasPermanentFireball()
+    return has("infinite_fireball")
+end
+
+function canBreakCrates()
+    return hasPermanentFireball() or hasHeadbash()
+end
+
 function maxSparxHealth()
-    if not has("setting_enable_progressive_sparx_logic") then
+    if ((not has("setting_enable_progressive_sparx_logic")) or (Tracker:FindObjectForCode("setting_enable_progressive_sparx_health").CurrentStage == 4)) then
         return 3
     else
         return Tracker:FindObjectForCode("progressive_sparx").CurrentStage
     end
 end
 
+function hasSparxHealth(health)
+    print("Max health = " .. maxSparxHealth())
+    print("Threshold = " .. tonumber(health))
+    return (maxSparxHealth() >= tonumber(health))
+end
+
 function canReachSummerSecondHalf()
-    return hasSwim()
+    return hasSwim() or (has("setting_trick_logic_sf_second_half_double_jump") and hasDoubleJump()) or has("setting_trick_logic_sf_second_half_nothing")
 end
 
 function canReachMetro()
@@ -150,23 +156,23 @@ function canReachMetro()
 end
 
 function canReachAutumnSecondHalf()
-    return hasClimb()
+    return hasClimb() or (has("setting_trick_logic_ap_climb_skip") and hasDoubleJump())
 end
 
 function canPassAutumnDoor()
-    return (canReachAutumnSecondHalf() and has_at_least("orb",8))
+    return canReachAutumnSecondHalf() and (has_at_least("orb",8) or (hasDoubleJump() and (has("setting_trick_logic_ap_door_skip") or has("setting_trick_logic_ap_climb_skip"))))
 end
 
 function canReachWinterSecondHalf()
-    return hasHeadbash()
+    return hasHeadbash() or (has("setting_trick_logic_wt_castle_double_jump") and hasDoubleJump()) or has("setting_trick_logic_wt_castle_penguin_proxy")
 end
 
 function canReachRiptoDoor()
-    return has_at_least("orb",Tracker:FindObjectForCode("setting_ripto_door_orbs").AcquiredCount)
+    return canReachWinterSecondHalf() and (has_at_least("orb",Tracker:FindObjectForCode("setting_ripto_door_orbs").AcquiredCount) or (((has("setting_trick_logic_wt_oob_double_jump") and hasDoubleJump()) or has("setting_trick_logic_wt_oob_nothing")) and has("setting_trick_logic_wt_swim_from_oob") and hasSwim()))
 end
 
 function hasAquariaWall()
-    return has("money_at_wall") or hasRiptoDefeated()
+    return canReachSummerSecondHalf() and ((has("setting_trick_logic_sf_swim_in_air") and hasSwim()) or (has("setting_trick_logic_sf_aquaria_wall_double_jump") and hasDoubleJump()) or has("setting_trick_logic_sf_aquaria_wall_nothing") or has("money_at_wall") or hasRiptoDefeated())
 end
 
 function hasAquariaSub()
@@ -197,282 +203,305 @@ function hasCSPortal()
     return has("money_cs_portal") or hasRiptoDefeated()
 end
 
-function hasIdolSpringsAccess()
-    if hasLevelLocks() and (not has("idol_springs_unlock")) then
+--Trick Rules
+function canReachSFSecretLedge()
+    return hasSwim() or (has("setting_trick_logic_sf_ledge_double_jump") and hasDoubleJump())
+end
+
+function canReachSFLadder()
+    return canReachSummerSecondHalf() and (hasClimb() or (has("setting_trick_logic_sf_swim_in_air") and hasSwim()) or (has("setting_trick_logic_sf_frog_proxy")))
+end
+
+function canReachGlimmerIndoorLamps()
+    return hasClimb() or (has("setting_trick_logic_indoor_lamps_double_jump") and hasDoubleJump()) or (has("setting_trick_logic_indoor_lamps_fireball") and hasPermanentFireball()) or has("setting_trick_logic_indoor_lamps_superfly")
+end
+
+function canReachAquariaFirstTunnel()
+    return hasSwim() or (has("setting_trick_logic_at_first_tunnel_double_jump") and hasDoubleJump()) or has("setting_trick_logic_at_sheep_proxy")
+end
+
+function canReachAquariaRoomTwoBottom()
+    return hasSwim() or has("setting_trick_logic_at_sheep_proxy")
+end
+
+function canReachAquariaRoomTwoCrabPit()
+    return hasSwim() or (has("setting_trick_logic_at_sheep_proxy") and has("setting_trick_logic_at_gems_oob"))
+end
+
+function canReachAquariaRoomTwoSharkPit()
+    return (hasSwim() and (hasAquariaSub() or hasPermanentFireball())) or (has("setting_trick_logic_at_sheep_proxy") and has("setting_trick_logic_at_gems_oob") and hasPermanentFireball())
+end
+
+function canReachAquariaRoomTwoMiddle()
+    return hasSwim() or (has("setting_trick_logic_at_sheep_proxy") and has("setting_trick_logic_at_gems_oob"))
+end
+
+function canReachAquariaRoomTwoTop()
+    return (hasSwim() and (hasAquariaSub() or (has("setting_trick_logic_at_button_three_fireball") and hasPermanentFireball()))) or (has("setting_trick_logic_at_sheep_proxy") and has("setting_trick_logic_at_gems_oob"))
+end
+
+function canReachAquariaPreMoneybagsTunnel()
+    return hasSwim() or (has("setting_trick_logic_at_sheep_proxy") and has("setting_trick_logic_at_gems_oob"))
+end
+
+function canReachAquariaSharkTunnel()
+    return (hasSwim() and (hasAquariaSub() or (has("setting_trick_logic_at_button_three_fireball") and hasPermanentFireball()))) or (has("setting_trick_logic_at_sheep_proxy") and has("setting_trick_logic_at_gems_oob") and hasPermanentFireball())
+end
+
+function canReachAquariaRoomThree()
+    return (hasSwim() and (hasAquariaSub() or (has("setting_trick_logic_at_button_three_fireball") and hasPermanentFireball()))) or has("setting_trick_logic_at_sheep_proxy")
+end
+
+function canReachAquariaTalismanAreaGems()
+    return canReachAquariaRoomThree() or (has("setting_trick_logic_at_talisman_area_double_jump") and hasDoubleJump())
+end
+
+function canReachAquariaChildrenOrb()
+    return (canReachAquariaRoomThree() and has("setting_trick_logic_at_royal_children_oob")) or (hasSwim() and hasAquariaSub())
+end
+
+function canReachAquariaSpiritParticles()
+    return hasSwim() and hasAquariaSub()
+end
+
+function canReachSunnyMiddleRoom()
+    return hasSwim() or has("setting_trick_logic_sb_first_turtle")
+end
+
+function canReachSunnyMiddleLadders()
+    return canReachSunnyMiddleRoom() and (hasClimb() or (has("setting_trick_logic_sb_double_jump_ladder_skip") and hasDoubleJump()) or has("setting_trick_logic_sb_nothing_ladder_skip"))
+end
+
+function canReachSunnyFinalArea()
+    return hasSwim() or has("setting_trick_logic_sb_first_turtle")
+end
+
+function canReachSunnyTurtleSoup()
+    return has("setting_trick_logic_sb_first_turtle") or (hasSwim() and (hasClimb() or has("setting_trick_logic_sb_final_turtle")))
+end
+
+function canReachMetroPlatform()
+    return canReachMetro() or (has("setting_trick_logic_ap_zephyr_double_jump") and hasDoubleJump())
+end
+
+function canReachAutumnWall()
+    return canReachMetro() or (has("setting_trick_logic_ap_zephyr_double_jump") and hasDoubleJump())
+end
+
+function canReachAutumnShadySection()
+    return canPassAutumnDoor() and hasSOPortal()
+end
+
+function canReachCrystalBridge()
+    return hasCGBridge() or (has("setting_trick_logic_crystal_bridge_double_jump") and hasDoubleJump()) or has("setting_trick_logic_crystal_bridge_snowball_proxy")
+end
+
+function canReachZephyrLadder()
+    return hasClimb() or (has("setting_trick_logic_zephyr_ladder_double_jump") and hasDoubleJump())
+end
+
+function canReachShadyHippos()
+    return hasHeadbash() or ((not has("setting_shady_require_headbash")) and hasPermanentFireball())
+end
+
+function canPassMagmaStart()
+    return hasClimb() or (has("setting_trick_logic_mc_start_double_jump") and hasDoubleJump()) or has("setting_trick_logic_mc_start_nothing")
+end
+
+function canReachMagmaSecondLevel()
+    return canPassMagmaStart() and (hasClimb() or (has("setting_trick_logic_mc_second_level_double_jump") and hasDoubleJump()))
+end
+
+function canReachMagmaPopcorn()
+    return canPassMagmaStart() and (hasClimb() or (has("setting_trick_logic_mc_popcorn_double_jump") and hasDoubleJump()))
+end
+
+function canReachMagmaMoneybags()
+    return canReachMagmaSecondLevel() and (hasClimb() or (has("setting_trick_logic_mc_moneybags_double_jump") and hasDoubleJump()))
+end
+
+function canPassMagmaElevator()
+    return canReachMagmaMoneybags() and (hasMCElevator() or (has("setting_trick_logic_mc_elevator_double_jump") and hasDoubleJump()))
+end
+
+function canReachMagmaTalisman()
+    return (canPassMagmaElevator() and hasClimb()) or (canReachMagmaMoneybags() and (has("setting_trick_logic_mc_elevator_double_jump") and hasDoubleJump()))
+end
+
+function canReachMagmaPartyCrashers()
+    return canReachMagmaTalisman()
+end
+
+function canReachMagmaFireballBalloons()
+    return canReachMagmaPartyCrashers() or (canPassMagmaElevator() and hasPermanentFireball())
+end
+
+function canReachFractureSupercharge()
+    return true
+end
+
+function canReachFractureFaun()
+    return true
+end
+
+function canReachFractureHunter()
+    return hasHeadbash() or ((not has("setting_fracture_require_headbash")) and hasPermanentFireball())
+end
+
+function canReachFractureEnemies()
+    return has("setting_fracture_easy_earthshapers") or hasPermanentFireball() or canReachFractureHunter()
+end
+
+function canReachWinterWaterfall()
+    return canReachWinterSecondHalf() and (hasSwim() or (has("setting_trick_logic_wt_oob_double_jump") and hasDoubleJump()) or has("setting_trick_logic_wt_oob_nothing"))
+end
+
+function canPassMetropolisElevator()
+    return hasHeadbash() or hasPermanentFireball()
+end
+
+function canReachMetropolisOx()
+    return canPassMetropolisElevator() and (hasClimb() or has("setting_trick_logic_metropolis_ox_superfly"))
+end
+
+--Level Rules
+function canSatisfyLevelLock(levelCode)
+    if hasLevelLocks() and (not has(levelCode)) then
         return false
     end
     return true
+end
+
+function hasIdolSpringsAccess()
+    return canSatisfyLevelLock("idol_springs_unlock")
 end
 
 function hasColossusAccess()
-    if hasLevelLocks() and (not has("colossus_unlock")) then
-        return false
-    end
-    return true
+    return canSatisfyLevelLock("colossus_unlock")
 end
 
 function hasHurricosAccess()
-    if not canReachSummerSecondHalf() then
-        return false
-    end
-    if hasLevelLocks() and (not has("hurricos_unlock")) then
-        return false
-    end
-    return true
+    return canReachSummerSecondHalf() and canSatisfyLevelLock("hurricos_unlock")
 end
 
 function hasAquariaTowersAccess()
-    if (not canReachSummerSecondHalf()) or (not hasAquariaWall()) or (not (maxSparxHealth() >= 1)) then
-        return false
-    end
-    if hasLevelLocks() and (not has("aquaria_towers_unlock")) then
-        return false
-    end
-    return true
+    return hasAquariaWall() and canSatisfyLevelLock("aquaria_towers_unlock")
 end
 
 function hasSunnyBeachAccess()
-    if not canReachSummerSecondHalf() then
-        return false
-    end
-    if hasLevelLocks() and (not has("sunny_beach_unlock")) then
-        return false
-    end
-    return true
+    return canReachSummerSecondHalf() and canSatisfyLevelLock("sunny_beach_unlock")
 end
 
 function hasOceanSpeedwayAccess()
-    if (not canReachSummerSecondHalf()) or (not has_at_least("orb",3)) then
-        return false
-    end
-    if hasLevelLocks() and (not has("ocean_speedway_unlock")) then
-        return false
-    end
-    return true
+    return (has_at_least("orb",3) or (has("setting_trick_logic_sf_swim_in_air") and hasSwim())) and canReachSummerSecondHalf() and canSatisfyLevelLock("ocean_speedway_unlock")
 end
 
 function hasCrushAccess()
-    if hasOpenWorld() then -- or has("setting_logic_crush_early_on") or (has("setting_logic_crush_early_with_dj") and has("setting_double_jump_ability_vanilla")) then
-        return (canReachSummerSecondHalf() and (maxSparxHealth() >= 1))
-    -- elseif has("setting_logic_crush_early_with_dj") then
-    --     return (canReachSummerSecondHalf() and (maxSparxHealth() >= 1) and hasDoubleJump() and has_at_least("summer_talisman",6))
-    else
-        return (canReachSummerSecondHalf() and (maxSparxHealth() >= 1) and has_at_least("summer_talisman",6))
-    end
+    return canReachSummerSecondHalf() and (hasOpenWorld() or has_at_least("summer_talisman",6))
 end
 
 function hasAutumnPlainsAccess()
-    if not (hasOpenWorld() and hasOpenAbilityAndWarps()) and not hasCrushDefeated() then
-        return false
-    end
-    return true
+    return (hasOpenWorld() and hasOpenAbilityAndWarps()) or hasCrushDefeated()
 end
 
 function hasSkelosBadlandsAccess()
-    if (not hasAutumnPlainsAccess()) or (not (maxSparxHealth() >= 2)) then
-        return false
-    end
-    if hasLevelLocks() and (not has("skelos_badlands_unlock")) then
-        return false
-    end
-    return true
+    return hasAutumnPlainsAccess() and canSatisfyLevelLock("skelos_badlands_unlock")
 end
 
 function hasCrystalGlacierAccess()
-    if not hasAutumnPlainsAccess() then
-        return false
-    end
-    if hasLevelLocks() and (not has("crystal_glacier_unlock")) then
-        return false
-    end
-    return true
+    return hasAutumnPlainsAccess() and canSatisfyLevelLock("crystal_glacier_unlock")
 end
 
 function hasBreezeHarborAccess()
-    if not hasAutumnPlainsAccess() then
-        return false
-    end
-    if hasLevelLocks() and (not has("breeze_harbor_unlock")) then
-        return false
-    end
-    return true
+    return hasAutumnPlainsAccess() and canSatisfyLevelLock("breeze_harbor_unlock")
 end
 
 function hasZephyrAccess()
-    if (not hasAutumnPlainsAccess()) or (not hasZPortal()) then
-        return false
-    end
-    if hasLevelLocks() and (not has("zephyr_unlock")) then
-        return false
-    end
-    return true
+    return hasAutumnPlainsAccess() and hasZPortal() and canSatisfyLevelLock("zephyr_unlock")
 end
 
 function hasMetroSpeedwayAccess()
-    if (not hasAutumnPlainsAccess()) or (not canReachMetro()) then
-        return false
-    end
-    if hasLevelLocks() and (not has("metro_speedway_unlock")) then
-        return false
-    end
-    return true
+    return hasAutumnPlainsAccess() and canReachMetro() and canSatisfyLevelLock("metro_speedway_unlock")
 end
 
 function hasScorchAccess()
-    if (not hasAutumnPlainsAccess()) or (not canReachAutumnSecondHalf()) then
-        return false
-    end
-    if hasLevelLocks() and (not has("scorch_unlock")) then
-        return false
-    end
-    return true
+    return hasAutumnPlainsAccess() and canReachAutumnSecondHalf() and canSatisfyLevelLock("scorch_unlock")
 end
 
 function hasShadyOasisAccess()
-    if (not hasAutumnPlainsAccess()) or (not canPassAutumnDoor()) or (not hasSOPortal()) then
-        return false
-    end
-    if hasLevelLocks() and (not has("shady_oasis_unlock")) then
-        return false
-    end
-    return true
+    return hasAutumnPlainsAccess() and canReachAutumnShadySection() and canSatisfyLevelLock("shady_oasis_unlock")
 end
 
 function hasMagmaConeAccess()
-    if (not hasAutumnPlainsAccess()) or (not canPassAutumnDoor()) then
-        return false
-    end
-    if hasLevelLocks() and (not has("magma_cone_unlock")) then
-        return false
-    end
-    return true
+    return hasAutumnPlainsAccess() and canPassAutumnDoor() and canSatisfyLevelLock("magma_cone_unlock")
 end
 
 function hasFractureHillsAccess()
-    if (not hasAutumnPlainsAccess()) or (not canReachAutumnSecondHalf()) then
-        return false
-    end
-    if hasLevelLocks() and (not has("fracture_hills_unlock")) then
-        return false
-    end
-    return true
+    return hasAutumnPlainsAccess() and canReachAutumnSecondHalf() and canSatisfyLevelLock("fracture_hills_unlock")
 end
 
 function hasIcySpeedwayAccess()
-    if (not hasAutumnPlainsAccess()) or (not canPassAutumnDoor()) or (not hasISPortal()) then
-        return false
-    end
-    if hasLevelLocks() and (not has("icy_speedway_unlock")) then
-        return false
-    end
-    return true
+    return hasAutumnPlainsAccess() and canPassAutumnDoor() and hasISPortal() and canSatisfyLevelLock("icy_speedway_unlock")
 end
 
 function hasGulpAccess()
-    if hasOpenWorld() then -- or has("setting_logic_gulp_early_on") or (has("setting_logic_gulp_early_with_dj") and has("setting_double_jump_ability_vanilla")) then
-        return (canPassAutumnDoor() and (maxSparxHealth() >= 2))
-    -- elseif has("setting_logic_gulp_early_with_dj") then
-    --     return (canPassAutumnDoor() and (maxSparxHealth() >= 2) and hasDoubleJump() and has_at_least("summer_talisman",6) and has_at_least("autumn_talisman",8))
-    else
-        return (canPassAutumnDoor() and (maxSparxHealth() >= 2) and has_at_least("summer_talisman",6) and has_at_least("autumn_talisman",8))
-    end
+    return hasAutumnPlainsAccess() and canPassAutumnDoor() and (hasOpenWorld() or (has_at_least("summer_talisman",6) and has_at_least("autumn_talisman",8)))
 end
 
 function hasWinterTundraAccess()
-    if not (hasOpenWorld() and hasOpenAbilityAndWarps()) and not hasGulpDefeated() then
-        return false
-    end
-    return true
+    return (hasOpenWorld() and hasOpenAbilityAndWarps()) or hasGulpDefeated()
 end
 
 function hasMysticMarshAccess()
-    if not hasWinterTundraAccess() then
-        return false
-    end
-    if hasLevelLocks() and (not has("mystic_marsh_unlock")) then
-        return false
-    end
-    return true
+    return hasWinterTundraAccess() and canSatisfyLevelLock("mystic_marsh_unlock")
 end
 
 function hasCloudTemplesAccess()
-    if (not hasWinterTundraAccess()) or (not has_at_least("orb",15)) then
-        return false
-    end
-    if hasLevelLocks() and (not has("cloud_temples_unlock")) then
-        return false
-    end
-    return true
+    return (hasWinterTundraAccess() and canSatisfyLevelLock("cloud_temples_unlock")) and (has_at_least("orb",15) or (canReachWinterSecondHalf() and (((has("setting_trick_logic_wt_oob_double_jump") and hasDoubleJump()) or has("setting_trick_logic_wt_oob_nothing")) and ((has("setting_trick_logic_wt_swim_from_oob") and hasSwim()) or has("setting_trick_logic_wt_glide_from_oob")))))
 end
 
 function hasCanyonSpeedwayAccess()
-    if (not hasWinterTundraAccess()) or (not hasCSPortal()) then
-        return false
-    end
-    if hasLevelLocks() and (not has("canyon_speedway_unlock")) then
-        return false
-    end
-    return true
+    return (hasWinterTundraAccess() and canSatisfyLevelLock("canyon_speedway_unlock")) and (hasCSPortal() or (canReachWinterSecondHalf() and ((has("setting_trick_logic_wt_oob_double_jump") and hasDoubleJump()) or has("setting_trick_logic_wt_oob_nothing")) and (((has("setting_trick_logic_wt_swim_from_oob") and hasSwim()) or has("setting_trick_logic_wt_glide_from_oob")))))
 end
 
 function hasRoboticaFarmsAccess()
-    if (not hasWinterTundraAccess()) or (not canReachWinterSecondHalf()) then
-        return false
-    end
-    if hasLevelLocks() and (not has("robotica_farms_unlock")) then
-        return false
-    end
-    return true
+    return hasWinterTundraAccess() and canReachWinterSecondHalf() and canSatisfyLevelLock("robotica_farms_unlock")
 end
 
 function hasMetropolisAccess()
-    if (not hasWinterTundraAccess()) or (not canReachWinterSecondHalf()) or (not has_at_least("orb",25)) then
-        return false
-    end
-    if hasLevelLocks() and (not has("metropolis_unlock")) then
-        return false
-    end
-    return true
+    return (hasWinterTundraAccess() and canSatisfyLevelLock("metropolis_unlock")) and (canReachWinterSecondHalf() and (has_at_least("orb",25) or (has("setting_trick_logic_wt_oob_double_jump") and hasDoubleJump() or has("setting_trick_logic_wt_oob_nothing")) and (has("setting_trick_logic_wt_swim_from_oob") and hasSwim() or has("setting_trick_logic_wt_glide_from_oob"))))
 end
 
 function hasRiptoAccess()
-    if (not hasWinterTundraAccess()) then
-        return false
-    -- end
-    -- if has("setting_logic_ripto_early_on") or (has("setting_logic_ripto_early_with_dj") and has("setting_double_jump_ability_vanilla")) then
-    --     return (canReachWinterSecondHalf() and (maxSparxHealth() >= 3))
-    -- elseif has("setting_logic_ripto_early_with_dj") then
-    --     return (canReachWinterSecondHalf() and (maxSparxHealth() >= 3) and hasDoubleJump() and has_at_least("orb",40))
-    else
-        return (canReachWinterSecondHalf() and (maxSparxHealth() >= 3) and canReachRiptoDoor())
-    end
+    return hasWinterTundraAccess() and canReachRiptoDoor()
 end
 
 function hasDragonShoresAccess()
-    if (not hasRiptoDefeated()) then
-        return false
-    end
+    --The only checks in dragon shores also require 55 orbs and 8000 gems
     if (not has_at_least("orb",55)) or (not canReachTotalGemCount(8000)) then
         return false
     end
-    if hasLevelLocks() and (not has("aquaria_towers_unlock")) then
-        return false
-    end
-    return true
+    return hasWinterTundraAccess() and (hasRiptoDefeated() or (canSatisfyLevelLock("aquaria_towers_unlock") and canReachWinterSecondHalf() and ((has("setting_trick_logic_wt_oob_double_jump") and hasDoubleJump() or has("setting_trick_logic_wt_oob_nothing")) and (has("setting_trick_logic_wt_swim_from_oob") and hasSwim() or has("setting_trick_logic_wt_glide_from_oob")))))
 end
 
 function reachableGemCountSummerForest()
     local reachable_gems = 0
     if has("setting_enable_gemsanity_off") then
         reachable_gems = 155
+        if canReachSFSecretLedge() then
+            reachable_gems = reachable_gems + 9
+        end
         if hasSwim() then
-            reachable_gems = reachable_gems + 221
-            if hasAquariaWall() then
-                reachable_gems = reachable_gems + 14
-            end
-            if hasClimb() then
-                reachable_gems = reachable_gems + 10
-            end
+            reachable_gems = reachable_gems + 42
+        end
+        if canReachSummerSecondHalf() then
+            reachable_gems = reachable_gems + 170
+        end
+        if canReachSFLadder() then
+            reachable_gems = reachable_gems + 10
+        end
+        if hasAquariaWall() then
+            reachable_gems = reachable_gems + 14
         end
     else
         reachable_gems = Tracker:ProviderCountForCode("inventory_gems_summ")
@@ -484,7 +513,7 @@ function reachableGemCountGlimmer()
     local reachable_gems = 0
     if has("setting_enable_gemsanity_off") then
         reachable_gems = 353
-        if hasClimb() then
+        if canReachGlimmerIndoorLamps() then
             reachable_gems = reachable_gems + 47
         end
     else
@@ -541,9 +570,36 @@ function reachableGemCountAquariaTowers()
         if not hasAquariaTowersAccess() then
             return 0
         end
-        reachable_gems = 127
-        if hasAquariaSub() then
-            reachable_gems = reachable_gems + 273
+        reachable_gems = 35
+        if canReachAquariaFirstTunnel() then
+            reachable_gems = reachable_gems + 19
+        end
+        if canReachAquariaRoomTwoBottom() then
+            reachable_gems = reachable_gems + 21
+        end
+        if canReachAquariaRoomTwoCrabPit() then
+            reachable_gems = reachable_gems + 27
+        end
+        if canReachAquariaRoomTwoSharkPit() then
+            reachable_gems = reachable_gems + 25
+        end
+        if canReachAquariaRoomTwoMiddle() then
+            reachable_gems = reachable_gems + 13
+        end
+        if canReachAquariaRoomTwoTop() then
+            reachable_gems = reachable_gems + 22
+        end
+        if canReachAquariaRoomThree() then
+            reachable_gems = reachable_gems + 56
+        end
+        if canReachAquariaTalismanAreaGems() then
+            reachable_gems = reachable_gems + 17
+        end
+        if canReachAquariaSharkTunnel() then
+            reachable_gems = reachable_gems + 40
+        end
+        if canReachAquariaRoomThree() then
+            reachable_gems = reachable_gems + 125
         end
     else
         reachable_gems = Tracker:ProviderCountForCode("inventory_gems_aqua")
@@ -557,9 +613,21 @@ function reachableGemCountSunnyBeach()
         if not hasSunnyBeachAccess() then
             return 0
         end
-        reachable_gems = 380
-        if hasClimb() then
-            reachable_gems = reachable_gems + 20
+        reachable_gems = 86
+        if (canReachSunnyTurtleSoup() and hasSwim()) then
+            reachable_gems = reachable_gems + 10
+        end
+        if canReachSunnyMiddleRoom() then
+            reachable_gems = reachable_gems + 184
+        end
+        if canReachSunnyMiddleLadders() then
+            reachable_gems = reachable_gems + 10
+        end
+        if canReachSunnyFinalArea() then
+            reachable_gems = reachable_gems + 21
+        end
+        if hasSwim() then
+            reachable_gems = reachable_gems + 89
         end
     else
         reachable_gems = Tracker:ProviderCountForCode("inventory_gems_sunn")
@@ -586,18 +654,24 @@ function reachableGemCountAutumnPlains()
         if not hasAutumnPlainsAccess() then
             return 0
         end
-        reachable_gems = 118
-        if canReachMetro() then
-            reachable_gems = reachable_gems + 22
+        reachable_gems = 105
+        if canReachMetroPlatform() then
+            reachable_gems = reachable_gems + 2
+        end
+        if hasSwim() then
+            reachable_gems = reachable_gems + 13
+        end
+        if canReachAutumnWall() then
+            reachable_gems = reachable_gems + 20
         end
         if canReachAutumnSecondHalf() then
             reachable_gems = reachable_gems + 51
         end
         if canPassAutumnDoor() then
             reachable_gems = reachable_gems + 202
-            if hasSOPortal() then
-                reachable_gems = reachable_gems + 7
-            end
+        end
+        if canReachAutumnShadySection() then
+            reachable_gems = reachable_gems + 7
         end
     else
         reachable_gems = Tracker:ProviderCountForCode("inventory_gems_autu")
@@ -625,7 +699,7 @@ function reachableGemCountCrystalGlacier()
             return 0
         end
         reachable_gems = 245
-        if hasCGBridge() then
+        if canReachCrystalBridge() then
             reachable_gems = reachable_gems + 155
         end
     else
@@ -640,7 +714,10 @@ function reachableGemCountBreezeHarbor()
         if not hasBreezeHarborAccess() then
             return 0
         end
-        reachable_gems = 400
+        reachable_gems = 391
+        if hasSwim() then
+            reachable_gems = reachable_gems + 9
+        end
     else
         reachable_gems = Tracker:ProviderCountForCode("inventory_gems_bree")
     end
@@ -654,7 +731,7 @@ function reachableGemCountZephyr()
             return 0
         end
         reachable_gems = 284
-        if hasClimb() then
+        if canReachZephyrLadder() then
             reachable_gems = reachable_gems + 116
         end
     else
@@ -695,7 +772,7 @@ function reachableGemCountShadyOasis()
             return 0
         end
         reachable_gems = 380
-        if hasHeadbash() then
+        if canBreakCrates() then
             reachable_gems = reachable_gems + 20
         end
     else
@@ -710,9 +787,27 @@ function reachableGemCountMagmaCone()
         if not hasMagmaConeAccess() then
             return 0
         end
-        reachable_gems = 295
-        if hasMCElevator() then
-            reachable_gems = reachable_gems + 105
+        reachable_gems = 14
+        if canPassMagmaStart() then
+            reachable_gems = reachable_gems + 60
+        end
+        if canReachMagmaSecondLevel() then
+            reachable_gems = reachable_gems + 163
+        end
+        if canReachMagmaPopcorn() then
+            reachable_gems = reachable_gems + 47
+        end
+        if canReachMagmaMoneybags() then
+            reachable_gems = reachable_gems + 11
+        end
+        if canPassMagmaElevator() then
+            reachable_gems = reachable_gems + 50
+        end
+        if canReachMagmaTalisman() then
+            reachable_gems = reachable_gems + 35
+        end
+        if canReachMagmaFireballBalloons() then
+            reachable_gems = reachable_gems + 20
         end
     else
         reachable_gems = Tracker:ProviderCountForCode("inventory_gems_magm")
@@ -752,11 +847,17 @@ function reachableGemCountWinterTundra()
             return 0
         end
         reachable_gems = 139
+        if canBreakCrates() then
+            reachable_gems = reachable_gems + 35
+        end
         if hasHeadbash() then
-            reachable_gems = reachable_gems + 254
-            if canReachRiptoDoor() then
-                reachable_gems = reachable_gems + 7
-            end
+            reachable_gems = reachable_gems + 11
+        end
+        if canReachWinterSecondHalf() then
+            reachable_gems = reachable_gems + 208
+        end
+        if canReachRiptoDoor() then
+            reachable_gems = reachable_gems + 7
         end
     else
         reachable_gems = Tracker:ProviderCountForCode("inventory_gems_wint")
@@ -770,7 +871,10 @@ function reachableGemCountMysticMarsh()
         if not hasMysticMarshAccess() then
             return 0
         end
-        reachable_gems = 400
+        reachable_gems = 312
+        if hasSwim() then
+            reachable_gems = reachable_gems + 88
+        end
     else
         reachable_gems = Tracker:ProviderCountForCode("inventory_gems_myst")
     end
@@ -784,7 +888,7 @@ function reachableGemCountCloudTemples()
             return 0
         end
         reachable_gems = 375
-        if hasHeadbash() then
+        if canBreakCrates() then
             reachable_gems = reachable_gems + 25
         end
     else
@@ -824,7 +928,13 @@ function reachableGemCountMetropolis()
         if not hasMetropolisAccess() then
             return 0
         end
-        reachable_gems = 400
+        reachable_gems = 24
+        if canReachMetropolisOx() then
+            reachable_gems = reachable_gems + 15
+        end
+        if canPassMetropolisElevator() then
+            reachable_gems = reachable_gems + 361
+        end
     else
         reachable_gems = Tracker:ProviderCountForCode("inventory_gems_metr")
     end

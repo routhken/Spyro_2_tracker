@@ -378,31 +378,26 @@
     {
         "name": "Setting: Open World",
         "type": "toggle",
-        "img": "/images/settings/Portal.png",
+        "img": "/images/settings/Portal_OpenWorld.png",
         "codes": "setting_open_world"
     },
     {
         "name": "Setting: Level Locks",
         "type": "toggle",
-        "img": "/images/settings/Portal.png",
+        "img": "/images/settings/Portal_LevelLocks.png",
         "codes": "setting_level_lock"
     },
     {
-        "name": "Setting: Level Unlocks",
-        "type": "consumable",
-        "img": "/images/settings/Portal.png",
-        "max_quantity": 22,
-        "increment": 1,
-        "decrement": 1,
-        "initial_quantity": 0,
-        "overlay_font_size": 20,
-        "codes": "setting_level_unlocks"
+        "name": "Setting: Open World Warps",
+        "type": "toggle",
+        "img": "/images/settings/Portal_OpenWarps.png",
+        "codes": "setting_open_world_warp_unlocks"
     },
     {
-        "name": "Setting: Open World Abilities and Warps",
+        "name": "Setting: Start with Abilities",
         "type": "toggle",
         "img": "/images/settings/Combined Abilities.png",
-        "codes": "setting_open_world_ability_and_warp_unlocks"
+        "codes": "setting_start_with_abilities"
     },
     {
         "name": "Setting: 25 Percent Gem Checks",
@@ -483,15 +478,15 @@
                 "inherit_codes": false
             },
             {
-                "name": "Setting: Gemsanity Full Local",
-                "img": "/images/settings/Gemsanity_Full_Local.png",
-                "codes": "setting_enable_gemsanity_local",
+                "name": "Setting: Gemsanity Full",
+                "img": "/images/settings/Gemsanity_Full_Global.png",
+                "codes": "setting_enable_gemsanity_global",
                 "inherit_codes": false
             },
             {
-                "name": "Setting: Gemsanity Full Global",
-                "img": "/images/settings/Gemsanity_Full_Global.png",
-                "codes": "setting_enable_gemsanity_global",
+                "name": "Setting: Gemsanity Full Local",
+                "img": "/images/settings/Gemsanity_Full_Local.png",
+                "codes": "setting_enable_gemsanity_local",
                 "inherit_codes": false
             }
         ],
@@ -580,13 +575,13 @@
         "stages": [
             {
                 "name": "Setting: Vanilla Double Jump",
-                "img": "/images/settings/Setting_Double_Jump.png",
+                "img": "/images/settings/Setting_Double_Jump_Vanilla.png",
                 "codes": "setting_double_jump_ability_vanilla",
                 "inherit_codes": false
             },
             {
                 "name": "Setting: Double Jump In Pool",
-                "img": "/images/settings/Setting_Double_Jump.png",
+                "img": "/images/settings/Setting_Double_Jump_Pool.png",
                 "codes": "setting_double_jump_ability_pool",
                 "inherit_codes": false
             },
@@ -608,13 +603,13 @@
         "stages": [
             {
                 "name": "Setting: Permanent Fireball Ability Vanilla",
-                "img": "/images/settings/Infinite Fireball.png",
+                "img": "/images/settings/Infinite Fireball Vanilla.png",
                 "codes": "setting_permanent_fireball_ability",
                 "inherit_codes": false
             },
             {
                 "name": "Setting: Permanent Fireball Ability In Pool",
-                "img": "/images/settings/Infinite Fireball.png",
+                "img": "/images/settings/Infinite Fireball Pool.png",
                 "codes": "setting_permanent_fireball_ability",
                 "inherit_codes": false
             },
@@ -626,12 +621,304 @@
             },
             {
                 "name": "Setting: Permanent Fireball Ability Start With",
-                "img": "/images/settings/Infinite Fireball.png",
+                "img": "/images/settings/Infinite Fireball Start.png",
                 "codes": "setting_permanent_fireball_ability",
                 "inherit_codes": false
             }
         ],
         "codes": "setting_permanent_fireball_ability"
+    },
+    {
+        "name": "Setting: Trick Logic",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": false,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "name": "Setting: Trick Logic Off",
+                "img": "/images/settings/Setting_TrickLogicOff.png",
+                "codes": "setting_trick_difficulty_off",
+                "inherit_codes": false
+            },
+            {
+                "name": "Setting: Trick Logic Easy",
+                "img": "/images/settings/Setting_TrickLogicEasy.png",
+                "codes": "setting_trick_difficulty_easy",
+                "inherit_codes": false
+            },
+            {
+                "name": "Setting: Trick Logic Medium",
+                "img": "/images/settings/Setting_TrickLogicMedium.png",
+                "codes": "setting_trick_difficulty_medium",
+                "inherit_codes": false
+            },
+            {
+                "name": "Setting: Trick Logic Hard",
+                "img": "/images/settings/Setting_TrickLogicHard.png",
+                "codes": "setting_trick_difficulty_hard",
+                "inherit_codes": false
+            },
+            {
+                "name": "Setting: Trick Logic Custom",
+                "img": "/images/settings/Setting_TrickLogicCustom.png",
+                "codes": "setting_trick_difficulty_custom",
+                "inherit_codes": false
+            }
+        ],
+        "codes": "setting_trick_difficulty"
+    },
+    {
+        "name": "Setting: Easy Earthshapers",
+        "type": "toggle",
+        "img": "/images/settings/Setting_FractureEarthshaper.png",
+        "codes": "setting_fracture_easy_earthshapers"
+    },
+    {
+        "name": "Setting: Shady Require Headbash",
+        "type": "toggle",
+        "img": "/images/settings/Setting_ShadyHeadbash.png",
+        "codes": "setting_shady_require_headbash"
+    },
+    {
+        "name": "Setting: Fracture Require Headbash",
+        "type": "toggle",
+        "img": "/images/settings/Setting_FractureHeadbash.png",
+        "codes": "setting_fracture_require_headbash"
+    },
+    {
+        "name": "Setting: Trick Summer Forest Ledge Orb with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_SFLedgeDoubleJump.png",
+        "codes": "setting_trick_logic_sf_ledge_double_jump"
+    },
+    {
+        "name": "Setting: Trick Summer Forest Second Half with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_SFSecondHalfDoubleJump.png",
+        "codes": "setting_trick_logic_sf_second_half_double_jump"
+    },
+    {
+        "name": "Setting: Trick Summer Forest Second Half with Nothing",
+        "type": "toggle",
+        "img": "/images/settings/Trick_SFSecondHalfNothing.png",
+        "codes": "setting_trick_logic_sf_second_half_nothing"
+    },
+    {
+        "name": "Setting: Trick Summer Forest Swim in Air",
+        "type": "toggle",
+        "img": "/images/settings/Trick_SFSwimInAir.png",
+        "codes": "setting_trick_logic_sf_swim_in_air"
+    },
+    {
+        "name": "Setting: Trick Summer Forest Frog Proxy",
+        "type": "toggle",
+        "img": "/images/settings/Trick_SFFrogProxy.png",
+        "codes": "setting_trick_logic_sf_frog_proxy"
+    },
+    {
+        "name": "Setting: Trick Summer Forest Aquaria Wall with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_SFAquariaWallDoubleJump.png",
+        "codes": "setting_trick_logic_sf_aquaria_wall_double_jump"
+    },
+    {
+        "name": "Setting: Trick Summer Forest Aquaria Wall with Nothing",
+        "type": "toggle",
+        "img": "/images/settings/Trick_SFAquariaWallNothing.png",
+        "codes": "setting_trick_logic_sf_aquaria_wall_nothing"
+    },
+    {
+        "name": "Setting: Trick Glimmer Indoor Lamps with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_GLIndoorLampsDoubleJump.png",
+        "codes": "setting_trick_logic_indoor_lamps_double_jump"
+    },
+    {
+        "name": "Setting: Trick Glimmer Indoor Lamps with Fireball",
+        "type": "toggle",
+        "img": "/images/settings/Trick_GLIndoorLampsFireball.png",
+        "codes": "setting_trick_logic_indoor_lamps_fireball"
+    },
+    {
+        "name": "Setting: Trick Glimmer Indoor Lamps with Superfly",
+        "type": "toggle",
+        "img": "/images/settings/Trick_GLIndoorLampsSuperfly.png",
+        "codes": "setting_trick_logic_indoor_lamps_superfly"
+    },
+    {
+        "name": "Setting: Trick Sunny Beach First Turtle Proxy",
+        "type": "toggle",
+        "img": "/images/settings/Trick_SBTurtleProxyFirst.png",
+        "codes": "setting_trick_logic_sb_first_turtle"
+    },
+    {
+        "name": "Setting: Trick Sunny Beach Final Turtle Proxy",
+        "type": "toggle",
+        "img": "/images/settings/Trick_SBTurtleProxyFinal.png",
+        "codes": "setting_trick_logic_sb_final_turtle"
+    },
+    {
+        "name": "Setting: Trick Sunny Beach Middle Ladders with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_SBMidLadderDoubleJump.png",
+        "codes": "setting_trick_logic_sb_double_jump_ladder_skip"
+    },
+    {
+        "name": "Setting: Trick Sunny Beach Middle Ladders with Nothing",
+        "type": "toggle",
+        "img": "/images/settings/Trick_SBMidLadderNothing.png",
+        "codes": "setting_trick_logic_sb_nothing_ladder_skip"
+    },
+    {
+        "name": "Setting: Trick Aquaria Towers First Tunnel with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_ATFirstTunnelDoubleJump.png",
+        "codes": "setting_trick_logic_at_first_tunnel_double_jump"
+    },
+    {
+        "name": "Setting: Trick Aquaria Towers Talisman Area with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_ATTalismanAreaDoubleJump.png",
+        "codes": "setting_trick_logic_at_talisman_area_double_jump"
+    },
+    {
+        "name": "Setting: Trick Aquaria Towers Sheep Proxy",
+        "type": "toggle",
+        "img": "/images/settings/Trick_ATSheepProxy.png",
+        "codes": "setting_trick_logic_at_sheep_proxy"
+    },
+    {
+        "name": "Setting: Trick Aquaria Towers Third Button with Fireball",
+        "type": "toggle",
+        "img": "/images/settings/Trick_ATThirdButtonFireball.png",
+        "codes": "setting_trick_logic_at_button_three_fireball"
+    },
+    {
+        "name": "Setting: Trick Aquaria Towers Royal Children Out of Bounds",
+        "type": "toggle",
+        "img": "/images/settings/Trick_ATChildrenOOB.png",
+        "codes": "setting_trick_logic_at_royal_children_oob"
+    },
+    {
+        "name": "Setting: Trick Aquaria Towers Gems Out of Bounds",
+        "type": "toggle",
+        "img": "/images/settings/Trick_ATGemsOOB.png",
+        "codes": "setting_trick_logic_at_gems_oob"
+    },
+    {
+        "name": "Setting: Trick Autumn Plains Double Jumps from Zephyr",
+        "type": "toggle",
+        "img": "/images/settings/Trick_APZephyrDoubleJump.png",
+        "codes": "setting_trick_logic_ap_zephyr_double_jump"
+    },
+    {
+        "name": "Setting: Trick Autumn Plains Climb Skip",
+        "type": "toggle",
+        "img": "/images/settings/Trick_APClimbSkip.png",
+        "codes": "setting_trick_logic_ap_climb_skip"
+    },
+    {
+        "name": "Setting: Trick Autumn Plains Professor Door Skip",
+        "type": "toggle",
+        "img": "/images/settings/Trick_APProfessorDoorSkip.png",
+        "codes": "setting_trick_logic_ap_door_skip"
+    },
+    {
+        "name": "Setting: Trick Crystal Glacier Skip Bridge with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_CGSkipBridgeDoubleJump.png",
+        "codes": "setting_trick_logic_crystal_bridge_double_jump"
+    },
+    {
+        "name": "Setting: Trick Crystal Glacier Skip Bridge with Snowball Proxy",
+        "type": "toggle",
+        "img": "/images/settings/Trick_CGSkipBridgeSnowballProxy.png",
+        "codes": "setting_trick_logic_crystal_bridge_snowball_proxy"
+    },
+    {
+        "name": "Setting: Trick Zephyr Skip Ladder with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_ZSkipLadderDoubleJump.png",
+        "codes": "setting_trick_logic_zephyr_ladder_double_jump"
+    },
+    {
+        "name": "Setting: Trick Magma Cone Pass Start with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_MCPassStartDoubleJump.png",
+        "codes": "setting_trick_logic_mc_start_double_jump"
+    },
+    {
+        "name": "Setting: Trick Magma Cone Pass Start with Nothing",
+        "type": "toggle",
+        "img": "/images/settings/Trick_MCPassStartNothing.png",
+        "codes": "setting_trick_logic_mc_start_nothing"
+    },
+    {
+        "name": "Setting: Trick Magma Cone Second Level with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_MCPSecondLevelDoubleJump.png",
+        "codes": "setting_trick_logic_mc_second_level_double_jump"
+    },
+    {
+        "name": "Setting: Trick Magma Cone Popcorn Area with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_MCPPopcornAreaDoubleJump.png",
+        "codes": "setting_trick_logic_mc_popcorn_double_jump"
+    },
+    {
+        "name": "Setting: Trick Magma Cone Moneybags with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_MCMoneybagsDoubleJump.png",
+        "codes": "setting_trick_logic_mc_moneybags_double_jump"
+    },
+    {
+        "name": "Setting: Trick Magma Cone Skip Elevator with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_MCSkipElevatorDoubleJump.png",
+        "codes": "setting_trick_logic_mc_elevator_double_jump"
+    },
+    {
+        "name": "Setting: Trick Winter Tundra Inside Castle with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_WTInsideCastleDoubleJump.png",
+        "codes": "setting_trick_logic_wt_castle_double_jump"
+    },
+    {
+        "name": "Setting: Trick Winter Tundra Inside Castle with Penguin Proxy",
+        "type": "toggle",
+        "img": "/images/settings/Trick_WTInsideCastlePenguinProxy.png",
+        "codes": "setting_trick_logic_wt_castle_penguin_proxy"
+    },
+    {
+        "name": "Setting: Trick Winter Tundra Out of Bounds with Double Jump",
+        "type": "toggle",
+        "img": "/images/settings/Trick_WTOOBDoubleJump.png",
+        "codes": "setting_trick_logic_wt_oob_double_jump"
+    },
+    {
+        "name": "Setting: Trick Winter Tundra Out of Bounds with Nothing",
+        "type": "toggle",
+        "img": "/images/settings/Trick_WTOOBNothing.png",
+        "codes": "setting_trick_logic_wt_oob_nothing"
+    },
+    {
+        "name": "Setting: Trick Winter Tundra Swim from Out of Bounds",
+        "type": "toggle",
+        "img": "/images/settings/Trick_WTOOBSwim.png",
+        "codes": "setting_trick_logic_wt_swim_from_oob"
+    },
+    {
+        "name": "Setting: Trick Winter Tundra Glide into Levels from Out of Bounds",
+        "type": "toggle",
+        "img": "/images/settings/Trick_WTOOBGlide.png",
+        "codes": "setting_trick_logic_wt_glide_from_oob"
+    },
+    {
+        "name": "Setting: Trick Metropolis Ox Orb without Climb",
+        "type": "toggle",
+        "img": "/images/settings/Trick_MetOxNoClimb.png",
+        "codes": "setting_trick_logic_metropolis_ox_superfly"
     },
     {
         "name": "Inventory: Summer Forest Gems",

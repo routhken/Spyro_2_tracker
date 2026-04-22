@@ -143,8 +143,9 @@ function onClear(slotData)
     Tracker:FindObjectForCode("setting_ripto_door_orbs").AcquiredCount = 0
     Tracker:FindObjectForCode("setting_open_world").Active = false
     Tracker:FindObjectForCode("setting_level_lock").Active = false
-    Tracker:FindObjectForCode("setting_level_unlocks").AcquiredCount = 0
-    Tracker:FindObjectForCode("setting_open_world_ability_and_warp_unlocks").Active = false
+    Tracker:FindObjectForCode("setting_start_with_abilities").Active = false
+    --Tracker:FindObjectForCode("setting_level_unlocks").AcquiredCount = 0
+    Tracker:FindObjectForCode("setting_open_world_warp_unlocks").Active = false
     Tracker:FindObjectForCode("setting_enable_25_pct_gem_checks").Active = false
     Tracker:FindObjectForCode("setting_enable_50_pct_gem_checks").Active = false
     Tracker:FindObjectForCode("setting_enable_75_pct_gem_checks").Active = false
@@ -161,25 +162,71 @@ function onClear(slotData)
     Tracker:FindObjectForCode("setting_enable_progressive_sparx_logic").Active = false
     Tracker:FindObjectForCode("setting_double_jump_ability").CurrentStage = 2
     Tracker:FindObjectForCode("setting_permanent_fireball_ability").CurrentStage = 2
-    -- Tracker:FindObjectForCode("setting_logic_crush_early").CurrentStage = 0
-    -- Tracker:FindObjectForCode("setting_logic_gulp_early").CurrentStage = 0
-    -- Tracker:FindObjectForCode("setting_logic_ripto_early").CurrentStage = 0
     Tracker:FindObjectForCode("progressive_sparx").CurrentStage = 0
+    Tracker:FindObjectForCode("setting_shady_require_headbash").Active = false
+    Tracker:FindObjectForCode("setting_fracture_require_headbash").Active = false
+    Tracker:FindObjectForCode("setting_fracture_easy_earthshapers").Active = false
+    Tracker:FindObjectForCode("setting_trick_difficulty").CurrentStage = 0
+    Tracker:FindObjectForCode("setting_trick_logic_sf_ledge_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_sf_second_half_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_sf_second_half_nothing").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_sf_swim_in_air").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_sf_frog_proxy").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_sf_aquaria_wall_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_sf_aquaria_wall_nothing").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_fireball").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_superfly").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_sb_first_turtle").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_sb_final_turtle").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_sb_double_jump_ladder_skip").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_sb_nothing_ladder_skip").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_at_first_tunnel_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_at_talisman_area_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_at_sheep_proxy").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_at_button_three_fireball").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_at_royal_children_oob").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_at_gems_oob").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_ap_zephyr_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_ap_climb_skip").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_ap_door_skip").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_crystal_bridge_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_crystal_bridge_snowball_proxy").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_zephyr_ladder_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_mc_start_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_mc_start_nothing").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_mc_second_level_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_mc_popcorn_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_mc_moneybags_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_mc_elevator_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_wt_castle_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_wt_castle_penguin_proxy").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_wt_oob_double_jump").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_wt_oob_nothing").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_wt_swim_from_oob").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_wt_glide_from_oob").Active = false
+    Tracker:FindObjectForCode("setting_trick_logic_metropolis_ox_superfly").Active = false
 
     if sd_options['ripto_door_orbs'] ~= 0 then
         Tracker:FindObjectForCode("setting_ripto_door_orbs").AcquiredCount = sd_options['ripto_door_orbs']
     end
     if sd_options['enable_open_world'] == 1 then
         Tracker:FindObjectForCode("setting_open_world").Active = true
-        if sd_options['open_world_ability_and_warp_unlocks'] == 1 then
-            Tracker:FindObjectForCode("setting_open_world_ability_and_warp_unlocks").Active = true
-        end
     end
+    if sd_options['open_world_warp_unlocks'] == 1 then
+        Tracker:FindObjectForCode("setting_open_world_warp_unlocks").Active = true
+    end
+    if sd_options['start_with_abilities'] == 1 then
+        Tracker:FindObjectForCode("setting_start_with_abilities").Active = true
+    end
+    -- if sd_options['wt_warp_options'] == 1 then
+    --     Tracker:FindObjectForCode("setting_wt_warp_options").Active = true
+    -- end
     if sd_options['level_lock_options'] == 1 then
         Tracker:FindObjectForCode("setting_level_lock").Active = true
-        if sd_options['level_unlocks'] ~= 0 then
-            Tracker:FindObjectForCode("setting_level_unlocks").AcquiredCount = sd_options['level_unlocks']
-        end
+        -- if sd_options['level_unlocks'] ~= 0 then
+        --     Tracker:FindObjectForCode("setting_level_unlocks").AcquiredCount = sd_options['level_unlocks']
+        -- end
     end
     if sd_options['enable_25_pct_gem_checks'] == 1 then
         Tracker:FindObjectForCode("setting_enable_25_pct_gem_checks").Active = true
@@ -236,15 +283,190 @@ function onClear(slotData)
     if sd_options['permanent_fireball_ability'] == 3 then
         Tracker:FindObjectForCode("infinite_fireball").Active = true
     end
-    -- if sd_options['logic_crush_early'] ~= 0 then
-    --     Tracker:FindObjectForCode("setting_logic_crush_early").CurrentStage = sd_options['logic_crush_early']
-    -- end
-    -- if sd_options['logic_gulp_early'] ~= 0 then
-    --     Tracker:FindObjectForCode("setting_logic_gulp_early").CurrentStage = sd_options['logic_gulp_early']
-    -- end
-    -- if sd_options['logic_ripto_early'] ~= 0 then
-    --     Tracker:FindObjectForCode("setting_logic_ripto_early").CurrentStage = sd_options['logic_ripto_early']
-    -- end
+    if sd_options['shady_require_headbash'] == 1 then
+        Tracker:FindObjectForCode("setting_shady_require_headbash").Active = true
+    end
+    if sd_options['fracture_require_headbash'] == 1 then
+        Tracker:FindObjectForCode("setting_fracture_require_headbash").Active = true
+    end
+    if sd_options['fracture_easy_earthshapers'] == 1 then
+        Tracker:FindObjectForCode("setting_fracture_easy_earthshapers").Active = true
+    end
+    if sd_options['trick_difficulty'] ~= 0 then
+        Tracker:FindObjectForCode("setting_trick_difficulty").CurrentStage = sd_options['trick_difficulty']
+    end
+    --EASY trick difficulty
+    if sd_options['trick_difficulty'] == 1 then
+        Tracker:FindObjectForCode("setting_trick_logic_sf_ledge_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_sf_swim_in_air").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_fireball").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_sb_double_jump_ladder_skip").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_at_first_tunnel_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_ap_zephyr_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_ap_door_skip").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_mc_start_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_mc_second_level_double_jump").Active = true
+    end
+    --MEDIUM trick difficulty
+    if sd_options['trick_difficulty'] == 2 then
+        Tracker:FindObjectForCode("setting_trick_logic_sf_ledge_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_sf_second_half_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_sf_second_half_nothing").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_sf_swim_in_air").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_sf_aquaria_wall_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_fireball").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_superfly").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_sb_double_jump_ladder_skip").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_sb_nothing_ladder_skip").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_at_first_tunnel_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_at_talisman_area_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_at_button_three_fireball").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_at_royal_children_oob").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_ap_zephyr_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_ap_climb_skip").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_ap_door_skip").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_crystal_bridge_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_zephyr_ladder_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_mc_start_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_mc_start_nothing").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_mc_second_level_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_mc_popcorn_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_mc_moneybags_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_mc_elevator_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_wt_castle_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_wt_oob_double_jump").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_wt_swim_from_oob").Active = true
+        Tracker:FindObjectForCode("setting_trick_logic_metropolis_ox_superfly").Active = true
+    end
+    --HARD trick difficulty
+    if sd_options['trick_difficulty'] == 3 then
+            Tracker:FindObjectForCode("setting_trick_logic_sf_ledge_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_sf_second_half_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_sf_second_half_nothing").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_sf_swim_in_air").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_sf_frog_proxy").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_sf_aquaria_wall_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_sf_aquaria_wall_nothing").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_fireball").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_superfly").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_sb_first_turtle").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_sb_final_turtle").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_sb_double_jump_ladder_skip").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_sb_nothing_ladder_skip").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_at_first_tunnel_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_at_talisman_area_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_at_sheep_proxy").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_at_button_three_fireball").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_at_royal_children_oob").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_at_gems_oob").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_ap_zephyr_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_ap_climb_skip").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_ap_door_skip").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_crystal_bridge_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_crystal_bridge_snowball_proxy").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_zephyr_ladder_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_mc_start_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_mc_start_nothing").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_mc_second_level_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_mc_popcorn_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_mc_moneybags_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_mc_elevator_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_wt_castle_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_wt_castle_penguin_proxy").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_wt_oob_double_jump").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_wt_oob_nothing").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_wt_swim_from_oob").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_wt_glide_from_oob").Active = true
+            Tracker:FindObjectForCode("setting_trick_logic_metropolis_ox_superfly").Active = true
+    end
+    --CUSTOM trick difficulty
+    if sd_options['trick_difficulty'] == 4 then
+        for _, trick in ipairs(sd_options['custom_tricks']) do
+            trickCase = string.lower(trick)
+            if trickCase == string.lower("Summer Forest Ledge Orb with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_sf_ledge_double_jump").Active = true
+            elseif trickCase == string.lower("Summer Forest Second Half with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_sf_second_half_double_jump").Active = true
+            elseif trickCase == string.lower("Summer Forest Second Half with Nothing") then
+                Tracker:FindObjectForCode("setting_trick_logic_sf_second_half_nothing").Active = true
+            elseif trickCase == string.lower("Summer Forest Swim in Air") then
+                Tracker:FindObjectForCode("setting_trick_logic_sf_swim_in_air").Active = true
+            elseif trickCase == string.lower("Summer Forest Frog Proxy") then
+                Tracker:FindObjectForCode("setting_trick_logic_sf_frog_proxy").Active = true
+            elseif trickCase == string.lower("Summer Forest Aquaria Wall with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_sf_aquaria_wall_double_jump").Active = true
+            elseif trickCase == string.lower("Summer Forest Aquaria Wall with Nothing") then
+                Tracker:FindObjectForCode("setting_trick_logic_sf_aquaria_wall_nothing").Active = true
+            elseif trickCase == string.lower("Glimmer Indoor Lamps with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_double_jump").Active = true
+            elseif trickCase == string.lower("Glimmer Indoor Lamps with Fireball") then
+                Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_fireball").Active = true
+            elseif trickCase == string.lower("Glimmer Indoor Lamps with Superfly") then
+                Tracker:FindObjectForCode("setting_trick_logic_indoor_lamps_superfly").Active = true
+            elseif trickCase == string.lower("Sunny Beach First Turtle Proxy") then
+                Tracker:FindObjectForCode("setting_trick_logic_sb_first_turtle").Active = true
+            elseif trickCase == string.lower("Sunny Beach Final Turtle Proxy") then
+                Tracker:FindObjectForCode("setting_trick_logic_sb_final_turtle").Active = true
+            elseif trickCase == string.lower("Sunny Beach Middle Ladders with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_sb_double_jump_ladder_skip").Active = true
+            elseif trickCase == string.lower("Sunny Beach Middle Ladders with Nothing") then
+                Tracker:FindObjectForCode("setting_trick_logic_sb_nothing_ladder_skip").Active = true
+            elseif trickCase == string.lower("Aquaria Towers First Tunnel with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_at_first_tunnel_double_jump").Active = true
+            elseif trickCase == string.lower("Aquaria Towers Talisman Area with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_at_talisman_area_double_jump").Active = true
+            elseif trickCase == string.lower("Aquaria Towers Sheep Proxy") then
+                Tracker:FindObjectForCode("setting_trick_logic_at_sheep_proxy").Active = true
+            elseif trickCase == string.lower("Aquaria Towers Third Button with Fireball") then
+                Tracker:FindObjectForCode("setting_trick_logic_at_button_three_fireball").Active = true
+            elseif trickCase == string.lower("Aquaria Towers Royal Children Out of Bounds") then
+                Tracker:FindObjectForCode("setting_trick_logic_at_royal_children_oob").Active = true
+            elseif trickCase == string.lower("Aquaria Towers Gems Out of Bounds") then
+                Tracker:FindObjectForCode("setting_trick_logic_at_gems_oob").Active = true
+            elseif trickCase == string.lower("Autumn Plains Double Jumps from Zephyr") then
+                Tracker:FindObjectForCode("setting_trick_logic_ap_zephyr_double_jump").Active = true
+            elseif trickCase == string.lower("Autumn Plains Climb Skip") then
+                Tracker:FindObjectForCode("setting_trick_logic_ap_climb_skip").Active = true
+            elseif trickCase == string.lower("Autumn Plains Skip Professor's Door") then
+                Tracker:FindObjectForCode("setting_trick_logic_ap_door_skip").Active = true
+            elseif trickCase == string.lower("Crystal Glacier Skip Bridge with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_crystal_bridge_double_jump").Active = true
+            elseif trickCase == string.lower("Crystal Glacier Skip Bridge with Snowball Proxy") then
+                Tracker:FindObjectForCode("setting_trick_logic_crystal_bridge_snowball_proxy").Active = true
+            elseif trickCase == string.lower("Zephyr Skip Ladder with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_zephyr_ladder_double_jump").Active = true
+            elseif trickCase == string.lower("Magma Cone Pass Start with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_mc_start_double_jump").Active = true
+            elseif trickCase == string.lower("Magma Cone Pass Start with Nothing") then
+                Tracker:FindObjectForCode("setting_trick_logic_mc_start_nothing").Active = true
+            elseif trickCase == string.lower("Magma Cone Second Level with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_mc_second_level_double_jump").Active = true
+            elseif trickCase == string.lower("Magma Cone Popcorn Area with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_mc_popcorn_double_jump").Active = true
+            elseif trickCase == string.lower("Magma Cone Moneybags with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_mc_moneybags_double_jump").Active = true
+            elseif trickCase == string.lower("Magma Cone Skip Elevator with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_mc_elevator_double_jump").Active = true
+            elseif trickCase == string.lower("Winter Tundra Inside Castle with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_wt_castle_double_jump").Active = true
+            elseif trickCase == string.lower("Winter Tundra Inside Castle with Penguin Proxy") then
+                Tracker:FindObjectForCode("setting_trick_logic_wt_castle_penguin_proxy").Active = true
+            elseif trickCase == string.lower("Winter Tundra Out of Bounds with Double Jump") then
+                Tracker:FindObjectForCode("setting_trick_logic_wt_oob_double_jump").Active = true
+            elseif trickCase == string.lower("Winter Tundra Out of Bounds with Nothing") then
+                Tracker:FindObjectForCode("setting_trick_logic_wt_oob_nothing").Active = true
+            elseif trickCase == string.lower("Winter Tundra Swim from Out of Bounds") then
+                Tracker:FindObjectForCode("setting_trick_logic_wt_swim_from_oob").Active = true
+            elseif trickCase == string.lower("Winter Tundra Glide into Levels from Out of Bounds") then
+                Tracker:FindObjectForCode("setting_trick_logic_wt_glide_from_oob").Active = true
+            elseif trickCase == string.lower("Metropolis Ox Orb without Climb") then
+                Tracker:FindObjectForCode("setting_trick_logic_metropolis_ox_superfly").Active = true
+            end
+        end
+    end
 
     --GEMSANITY
     if sd_options['enable_gemsanity'] ~= 0 then
