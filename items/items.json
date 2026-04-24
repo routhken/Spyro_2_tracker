@@ -296,17 +296,6 @@
         "codes": "dragon_shores_unlock"
     },
     {
-        "name": "Glimmer Red Gem",
-        "type": "consumable",
-        "img": "/images/items/Autumn Talisman.png",
-        "max_quantity": 9999,
-        "increment": 1,
-        "decrement": 1,
-        "initial_quantity": 0,
-        "overlay_font_size": 20,
-        "codes": "glimmer_red_gem"
-    },
-    {
         "name": "Goal",
         "type": "progressive",
         "allow_disabled": false,
@@ -491,6 +480,23 @@
             }
         ],
         "codes": "setting_enable_gemsanity"
+    },
+    {
+        "name": "Setting: Gemsanity Reward Type",
+        "type": "toggle",
+        "img": "/images/settings/Pink Gem.png",
+        "codes": "setting_gemsanity_reward_type"
+    },
+    {
+        "name": "Setting: Gemsanity Bundle Size",
+        "type": "consumable",
+        "img": "/images/settings/Gold Gem.png",
+        "max_quantity": 400,
+        "increment": 1,
+        "decrement": 1,
+        "initial_quantity": 0,
+        "overlay_font_size": 20,
+        "codes": "setting_gemsanity_gem_bundle_size"
     },
     {
         "name": "Setting: Moneybags",
@@ -943,7 +949,7 @@
     {
         "name": "Summer Forest Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -952,7 +958,7 @@
     {
         "name": "Summer Forest Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -961,7 +967,7 @@
     {
         "name": "Summer Forest Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -970,7 +976,7 @@
     {
         "name": "Summer Forest Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -979,7 +985,7 @@
     {
         "name": "Summer Forest 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1008,7 +1014,7 @@
     {
         "name": "Glimmer Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1017,7 +1023,7 @@
     {
         "name": "Glimmer Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1026,7 +1032,7 @@
     {
         "name": "Glimmer Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1035,7 +1041,7 @@
     {
         "name": "Glimmer Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1044,7 +1050,7 @@
     {
         "name": "Glimmer 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1073,7 +1079,7 @@
     {
         "name": "Idol Springs Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1082,7 +1088,7 @@
     {
         "name": "Idol Springs Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1091,7 +1097,7 @@
     {
         "name": "Idol Springs Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1100,7 +1106,7 @@
     {
         "name": "Idol Springs Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1109,7 +1115,7 @@
     {
         "name": "Idol Springs 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1138,7 +1144,7 @@
     {
         "name": "Colossus Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1147,7 +1153,7 @@
     {
         "name": "Colossus Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1156,7 +1162,7 @@
     {
         "name": "Colossus Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1165,7 +1171,7 @@
     {
         "name": "Colossus Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1174,7 +1180,7 @@
     {
         "name": "Colossus 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1203,7 +1209,7 @@
     {
         "name": "Hurricos Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1212,7 +1218,7 @@
     {
         "name": "Hurricos Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1221,7 +1227,7 @@
     {
         "name": "Hurricos Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1230,7 +1236,7 @@
     {
         "name": "Hurricos Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1239,7 +1245,7 @@
     {
         "name": "Hurricos 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1268,7 +1274,7 @@
     {
         "name": "Aquaria Towers Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1277,7 +1283,7 @@
     {
         "name": "Aquaria Towers Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1286,7 +1292,7 @@
     {
         "name": "Aquaria Towers Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1295,7 +1301,7 @@
     {
         "name": "Aquaria Towers Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1304,7 +1310,7 @@
     {
         "name": "Aquaria Towers 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1333,7 +1339,7 @@
     {
         "name": "Sunny Beach Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1342,7 +1348,7 @@
     {
         "name": "Sunny Beach Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1351,7 +1357,7 @@
     {
         "name": "Sunny Beach Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1360,7 +1366,7 @@
     {
         "name": "Sunny Beach Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1369,7 +1375,7 @@
     {
         "name": "Sunny Beach 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1409,7 +1415,7 @@
     {
         "name": "Autumn Plains Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1418,7 +1424,7 @@
     {
         "name": "Autumn Plains Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1427,7 +1433,7 @@
     {
         "name": "Autumn Plains Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1436,7 +1442,7 @@
     {
         "name": "Autumn Plains Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1445,7 +1451,7 @@
     {
         "name": "Autumn Plains 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1474,7 +1480,7 @@
     {
         "name": "Skelos Badlands Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1483,7 +1489,7 @@
     {
         "name": "Skelos Badlands Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1492,7 +1498,7 @@
     {
         "name": "Skelos Badlands Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1501,7 +1507,7 @@
     {
         "name": "Skelos Badlands Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1510,7 +1516,7 @@
     {
         "name": "Skelos Badlands 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1539,7 +1545,7 @@
     {
         "name": "Crystal Glacier Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1548,7 +1554,7 @@
     {
         "name": "Crystal Glacier Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1557,7 +1563,7 @@
     {
         "name": "Crystal Glacier Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1566,7 +1572,7 @@
     {
         "name": "Crystal Glacier Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1575,7 +1581,7 @@
     {
         "name": "Crystal Glacier 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1604,7 +1610,7 @@
     {
         "name": "Breeze Harbor Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1613,7 +1619,7 @@
     {
         "name": "Breeze Harbor Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1622,7 +1628,7 @@
     {
         "name": "Breeze Harbor Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1631,7 +1637,7 @@
     {
         "name": "Breeze Harbor Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1640,7 +1646,7 @@
     {
         "name": "Breeze Harbor 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1669,7 +1675,7 @@
     {
         "name": "Zephyr Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1678,7 +1684,7 @@
     {
         "name": "Zephyr Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1687,7 +1693,7 @@
     {
         "name": "Zephyr Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1696,7 +1702,7 @@
     {
         "name": "Zephyr Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1705,7 +1711,7 @@
     {
         "name": "Zephyr 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1745,7 +1751,7 @@
     {
         "name": "Scorch Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1754,7 +1760,7 @@
     {
         "name": "Scorch Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1763,7 +1769,7 @@
     {
         "name": "Scorch Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1772,7 +1778,7 @@
     {
         "name": "Scorch Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1781,7 +1787,7 @@
     {
         "name": "Scorch 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1810,7 +1816,7 @@
     {
         "name": "Shady Oasis Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1819,7 +1825,7 @@
     {
         "name": "Shady Oasis Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1828,7 +1834,7 @@
     {
         "name": "Shady Oasis Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1837,7 +1843,7 @@
     {
         "name": "Shady Oasis Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1846,7 +1852,7 @@
     {
         "name": "Shady Oasis 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1875,7 +1881,7 @@
     {
         "name": "Magma Cone Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1884,7 +1890,7 @@
     {
         "name": "Magma Cone Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1893,7 +1899,7 @@
     {
         "name": "Magma Cone Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1902,7 +1908,7 @@
     {
         "name": "Magma Cone Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1911,7 +1917,7 @@
     {
         "name": "Magma Cone 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1940,7 +1946,7 @@
     {
         "name": "Fracture Hills Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1949,7 +1955,7 @@
     {
         "name": "Fracture Hills Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1958,7 +1964,7 @@
     {
         "name": "Fracture Hills Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1967,7 +1973,7 @@
     {
         "name": "Fracture Hills Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -1976,7 +1982,7 @@
     {
         "name": "Fracture Hills 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2016,7 +2022,7 @@
     {
         "name": "Winter Tundra Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2025,7 +2031,7 @@
     {
         "name": "Winter Tundra Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2034,7 +2040,7 @@
     {
         "name": "Winter Tundra Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2043,7 +2049,7 @@
     {
         "name": "Winter Tundra Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2052,7 +2058,7 @@
     {
         "name": "Winter Tundra 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2081,7 +2087,7 @@
     {
         "name": "Mystic Marsh Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2090,7 +2096,7 @@
     {
         "name": "Mystic Marsh Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2099,7 +2105,7 @@
     {
         "name": "Mystic Marsh Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2108,7 +2114,7 @@
     {
         "name": "Mystic Marsh Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2117,7 +2123,7 @@
     {
         "name": "Mystic Marsh 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2146,7 +2152,7 @@
     {
         "name": "Cloud Temples Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2155,7 +2161,7 @@
     {
         "name": "Cloud Temples Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2164,7 +2170,7 @@
     {
         "name": "Cloud Temples Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2173,7 +2179,7 @@
     {
         "name": "Cloud Temples Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2182,7 +2188,7 @@
     {
         "name": "Cloud Temples 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2222,7 +2228,7 @@
     {
         "name": "Robotica Farms Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2231,7 +2237,7 @@
     {
         "name": "Robotica Farms Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2240,7 +2246,7 @@
     {
         "name": "Robotica Farms Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2249,7 +2255,7 @@
     {
         "name": "Robotica Farms Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2258,7 +2264,7 @@
     {
         "name": "Robotica Farms 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2287,7 +2293,7 @@
     {
         "name": "Metropolis Green Gem",
         "type": "consumable",
-        "max_quantity": 200,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2296,7 +2302,7 @@
     {
         "name": "Metropolis Blue Gem",
         "type": "consumable",
-        "max_quantity": 80,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2305,7 +2311,7 @@
     {
         "name": "Metropolis Gold Gem",
         "type": "consumable",
-        "max_quantity": 40,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2314,7 +2320,7 @@
     {
         "name": "Metropolis Pink Gem",
         "type": "consumable",
-        "max_quantity": 16,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,
@@ -2323,7 +2329,7 @@
     {
         "name": "Metropolis 50 Gems",
         "type": "consumable",
-        "max_quantity": 8,
+        "max_quantity": 400,
         "increment": 1,
         "decrement": 1,
         "initial_quantity": 0,

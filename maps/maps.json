@@ -19,13 +19,13 @@
     },
     {
         "name": "Idol Springs",
-        "location_size": 45,
+        "location_size": 30,
         "location_border_thickness": 4,
         "img": "images/maps/Idol Springs.png"
     },
     {
         "name": "Colossus",
-        "location_size": 45,
+        "location_size": 30,
         "location_border_thickness": 4,
         "img": "images/maps/Colossus.png"
     },
@@ -37,7 +37,7 @@
     },
     {
         "name": "Aquaria Towers",
-        "location_size": 45,
+        "location_size": 30,
         "location_border_thickness": 4,
         "img": "images/maps/Aquaria Towers.png"
     },
@@ -61,7 +61,7 @@
     },
     {
         "name": "Crystal Glacier",
-        "location_size": 45,
+        "location_size": 30,
         "location_border_thickness": 4,
         "img": "images/maps/Crystal Glacier.png"
     },
@@ -97,7 +97,7 @@
     },
     {
         "name": "Fracture Hills",
-        "location_size": 45,
+        "location_size": 30,
         "location_border_thickness": 4,
         "img": "images/maps/Fracture Hills.png"
     },
@@ -121,7 +121,7 @@
     },
     {
         "name": "Robotica Farms",
-        "location_size": 45,
+        "location_size": 30,
         "location_border_thickness": 4,
         "img": "images/maps/Robotica Farms.png"
     },

@@ -1,6 +1,16 @@
 {
     "versions": [
         {
+            "package_version": "1.3.0",
+            "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.3.0/Spyro_2_aptracker.zip",
+            "sha256": "14014238d312539dd45735d1ba2182f5ec1a235fe02d8d43d6c6526e1eee6cc4",
+            "changelog": [
+                "Added gem bundle size logic and setting icon",
+                "Fixed easy tricks setting using sf secret ledge double jump instead of sf second half double jump",
+                "Removed some unused images",
+                "Compressed some map images to reduce size of the pack"
+            ]
+        },{
             "package_version": "1.2.0",
             "download_url": "https://github.com/routhken/Spyro_2_tracker/releases/download/v1.2.0/Spyro_2_aptracker.zip",
             "sha256": "8e236f0500294cbc6d179d36ccdec15c8b480dc97ef41d0790cd9605ccec85e9",

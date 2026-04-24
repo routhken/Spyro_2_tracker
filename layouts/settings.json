@@ -35,6 +35,7 @@
                             [
                                 "setting_enable_spirit_particle_checks",
                                 "setting_enable_gemsanity",
+                                "setting_gemsanity_gem_bundle_size",
                                 "setting_moneybags_settings",
                                 "setting_enable_skillpoint_checks",
                                 "setting_enable_life_bottle_checks"
